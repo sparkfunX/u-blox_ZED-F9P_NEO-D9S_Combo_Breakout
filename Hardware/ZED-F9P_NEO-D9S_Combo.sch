@@ -10061,6 +10061,24 @@ Power Layers</text>
 <wire x1="-0.4" y1="6" x2="0" y2="6.7" width="0.0762" layer="51"/>
 <wire x1="0" y1="6.7" x2="0.4" y2="6" width="0.0762" layer="51"/>
 </package>
+<package name="PD0922J5050S2HF_ANA">
+<smd name="1" x="0.65" y="0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
+<smd name="2" x="0" y="0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
+<smd name="3" x="-0.65" y="0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
+<smd name="4" x="-0.65" y="-0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
+<smd name="5" x="0" y="-0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
+<smd name="6" x="0.65" y="-0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
+<wire x1="-1.143" y1="0.762" x2="-1.143" y2="-0.762" width="0.1524" layer="21"/>
+<wire x1="1.143" y1="-0.762" x2="1.143" y2="0.762" width="0.1524" layer="21"/>
+<text x="-1.27" y="-1.651" size="0.508" layer="27" ratio="6" rot="SR0">&gt;Value</text>
+<wire x1="-1.02" y1="0.645" x2="-1.02" y2="-0.645" width="0.05" layer="51"/>
+<wire x1="-1.02" y1="-0.645" x2="1.02" y2="-0.645" width="0.05" layer="51"/>
+<wire x1="1.02" y1="-0.645" x2="1.02" y2="0.645" width="0.05" layer="51"/>
+<wire x1="1.02" y1="0.645" x2="-1.02" y2="0.645" width="0.05" layer="51"/>
+<text x="-1.143" y="1.016" size="0.508" layer="25" ratio="6" rot="SR0">&gt;Name</text>
+<circle x="0.762" y="0" radius="0.1016" width="0.0762" layer="51"/>
+<circle x="1.524" y="0" radius="0.0762" width="0.2032" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ANTENNA-GROUNDED">
@@ -10075,6 +10093,18 @@ Power Layers</text>
 <text x="3.048" y="-2.286" size="1.778" layer="96" font="vector">&gt;VALUE</text>
 <pin name="GND" x="2.54" y="-2.54" visible="off" length="short" rot="R90"/>
 <pin name="SIGNAL" x="0" y="-2.54" visible="off" length="short" rot="R90"/>
+</symbol>
+<symbol name="PD0922J5050S2HF">
+<pin name="INPUT" x="-15.24" y="2.54" visible="pin" length="short" direction="in"/>
+<pin name="GND" x="-15.24" y="-2.54" visible="pin" length="short" direction="pas"/>
+<pin name="OUTPUT1" x="12.7" y="2.54" visible="pin" length="short" direction="out" rot="R180"/>
+<pin name="OUTPUT2" x="12.7" y="-2.54" visible="pin" length="short" direction="out" rot="R180"/>
+<wire x1="-12.7" y1="5.08" x2="-12.7" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="-12.7" y1="-5.08" x2="10.16" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="-5.08" x2="10.16" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="-12.7" y2="5.08" width="0.1524" layer="94"/>
+<text x="-12.7" y="5.334" size="1.778" layer="95" ratio="6" rot="SR0">&gt;Name</text>
+<text x="-12.7" y="-7.62" size="1.778" layer="96" ratio="6" rot="SR0">&gt;Value</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -10146,6 +10176,34 @@ Why hasn't anyone added the cutout polygons directly to the connector footprint?
 <technologies>
 <technology name="">
 <attribute name="PROD_ID" value="CONN-16309" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="POWER-DIVIDER" prefix="U">
+<description>The PD0922J5050S2HF is a low profile, sub-miniature Wilkinson power divider in
+an easy to use surface mount package. The PD0922J5050S2HF is matched to 50 Ω and has a
+height profile of 0.5 mm which is ideal for high level integrations in the following
+markets: DVB-S, DVB-H (USA), GSM, DCS, PCS, CDMA, 3G and GPS. The
+PD0922J5050S2HF does not include the resistive element and therefore, requires
+an external resistor for operation.</description>
+<gates>
+<gate name="U1" symbol="PD0922J5050S2HF" x="-24.13" y="10.16"/>
+</gates>
+<devices>
+<device name="" package="PD0922J5050S2HF_ANA">
+<connects>
+<connect gate="U1" pin="GND" pad="1 3 5"/>
+<connect gate="U1" pin="INPUT" pad="2"/>
+<connect gate="U1" pin="OUTPUT1" pad="4"/>
+<connect gate="U1" pin="OUTPUT2" pad="6"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGI-KEY_PART_NUMBER_1" value="1173-1094-2-ND" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="PD0922J5050S2HF" constant="no"/>
+<attribute name="PROD_ID" value="IC-16658" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -10880,24 +10938,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <rectangle x1="2.7" y1="-1.5" x2="3.6" y2="-0.6" layer="31"/>
 <rectangle x1="0.6" y1="-1.5" x2="1.5" y2="-0.6" layer="31"/>
 </package>
-<package name="PD0922J5050S2HF_ANA">
-<smd name="1" x="0.65" y="0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
-<smd name="2" x="0" y="0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
-<smd name="3" x="-0.65" y="0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
-<smd name="4" x="-0.65" y="-0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
-<smd name="5" x="0" y="-0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
-<smd name="6" x="0.65" y="-0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
-<wire x1="-1.143" y1="0.762" x2="-1.143" y2="-0.762" width="0.1524" layer="21"/>
-<wire x1="1.143" y1="-0.762" x2="1.143" y2="0.762" width="0.1524" layer="21"/>
-<text x="-1.27" y="-1.651" size="0.508" layer="27" ratio="6" rot="SR0">&gt;Value</text>
-<wire x1="-1.02" y1="0.645" x2="-1.02" y2="-0.645" width="0.05" layer="51"/>
-<wire x1="-1.02" y1="-0.645" x2="1.02" y2="-0.645" width="0.05" layer="51"/>
-<wire x1="1.02" y1="-0.645" x2="1.02" y2="0.645" width="0.05" layer="51"/>
-<wire x1="1.02" y1="0.645" x2="-1.02" y2="0.645" width="0.05" layer="51"/>
-<text x="-1.143" y="1.016" size="0.508" layer="25" ratio="6" rot="SR0">&gt;Name</text>
-<circle x="0.762" y="0" radius="0.1016" width="0.0762" layer="51"/>
-<circle x="1.524" y="0" radius="0.0762" width="0.2032" layer="21"/>
-</package>
 </packages>
 <symbols>
 <symbol name="NEO-D9S">
@@ -10962,18 +11002,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="-15.24" y="-27.94" size="1.778" layer="96">&gt;Value</text>
 <pin name="TX2" x="17.78" y="-2.54" length="short" rot="R180"/>
 <pin name="RX2" x="17.78" y="-5.08" length="short" rot="R180"/>
-</symbol>
-<symbol name="PD0922J5050S2HF">
-<pin name="INPUT" x="-15.24" y="2.54" visible="pin" length="short" direction="in"/>
-<pin name="GND" x="-15.24" y="-2.54" visible="pin" length="short" direction="pas"/>
-<pin name="OUTPUT1" x="12.7" y="2.54" visible="pin" length="short" direction="out" rot="R180"/>
-<pin name="OUTPUT2" x="12.7" y="-2.54" visible="pin" length="short" direction="out" rot="R180"/>
-<wire x1="-12.7" y1="5.08" x2="-12.7" y2="-5.08" width="0.1524" layer="94"/>
-<wire x1="-12.7" y1="-5.08" x2="10.16" y2="-5.08" width="0.1524" layer="94"/>
-<wire x1="10.16" y1="-5.08" x2="10.16" y2="5.08" width="0.1524" layer="94"/>
-<wire x1="10.16" y1="5.08" x2="-12.7" y2="5.08" width="0.1524" layer="94"/>
-<text x="-12.7" y="5.334" size="1.778" layer="95" ratio="6" rot="SR0">&gt;Name</text>
-<text x="-12.7" y="-7.62" size="1.778" layer="96" ratio="6" rot="SR0">&gt;Value</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -11054,33 +11082,6 @@ The NEO-D9S can receive the data stream of a GNSS correction service, broadcast 
 <technologies>
 <technology name="">
 <attribute name="PROD_ID" value="IC-14209" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="POWER-DIVIDER" prefix="U">
-<description>The PD0922J5050S2HF is a low profile, sub-miniature Wilkinson power divider in
-an easy to use surface mount package. The PD0922J5050S2HF is matched to 50 Ω and has a
-height profile of 0.5 mm which is ideal for high level integrations in the following
-markets: DVB-S, DVB-H (USA), GSM, DCS, PCS, CDMA, 3G and GPS. The
-PD0922J5050S2HF does not include the resistive element and therefore, requires
-an external resistor for operation.</description>
-<gates>
-<gate name="U1" symbol="PD0922J5050S2HF" x="-24.13" y="10.16"/>
-</gates>
-<devices>
-<device name="" package="PD0922J5050S2HF_ANA">
-<connects>
-<connect gate="U1" pin="GND" pad="1 3 5"/>
-<connect gate="U1" pin="INPUT" pad="2"/>
-<connect gate="U1" pin="OUTPUT1" pad="4"/>
-<connect gate="U1" pin="OUTPUT2" pad="6"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MANUFACTURER_PART_NUMBER" value="PD0922J5050S2HF" constant="no"/>
-<attribute name="PROD_ID" value="IC-16658" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -12895,7 +12896,7 @@ high temperature heat resistance.
 <part name="C7" library="SparkFun-Capacitors" deviceset="47PF" device="-0603-50V-5%" value="47pF"/>
 <part name="FRAME2" library="SparkFun-Aesthetics" deviceset="FRAME-LEDGER" device=""/>
 <part name="LOGO5" library="SparkFun-Aesthetics" deviceset="SPECIAL_INSTRUCTIONS" device="-ORDERING"/>
-<part name="U3" library="SparkFun-GPS" deviceset="POWER-DIVIDER" device=""/>
+<part name="U3" library="SparkFun-RF" deviceset="POWER-DIVIDER" device=""/>
 <part name="U4" library="SparkFun-GPS" deviceset="U-BLOX_ZED-F9P" device=""/>
 <part name="R15" library="SparkFun-Resistors" deviceset="27OHM" device="-0603-1/10W-1%" value="27"/>
 <part name="R16" library="SparkFun-Resistors" deviceset="27OHM" device="-0603-1/10W-1%" value="27"/>

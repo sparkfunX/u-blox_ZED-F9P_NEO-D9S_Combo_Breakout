@@ -1412,6 +1412,24 @@ This is a footprint for an edge mount RF antenna. Works pretty well with SMA typ
 <wire x1="-2.667" y1="7.112" x2="3.175" y2="7.366" width="0.0254" layer="51"/>
 <wire x1="2.667" y1="6.604" x2="3.175" y2="6.35" width="0.0762" layer="51"/>
 </package>
+<package name="PD0922J5050S2HF_ANA">
+<smd name="1" x="0.65" y="0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
+<smd name="2" x="0" y="0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
+<smd name="3" x="-0.65" y="0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
+<smd name="4" x="-0.65" y="-0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
+<smd name="5" x="0" y="-0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
+<smd name="6" x="0.65" y="-0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
+<wire x1="-1.143" y1="0.762" x2="-1.143" y2="-0.762" width="0.1524" layer="21"/>
+<wire x1="1.143" y1="-0.762" x2="1.143" y2="0.762" width="0.1524" layer="21"/>
+<text x="-1.27" y="-1.651" size="0.508" layer="27" ratio="6" rot="SR0">&gt;Value</text>
+<wire x1="-1.02" y1="0.645" x2="-1.02" y2="-0.645" width="0.05" layer="51"/>
+<wire x1="-1.02" y1="-0.645" x2="1.02" y2="-0.645" width="0.05" layer="51"/>
+<wire x1="1.02" y1="-0.645" x2="1.02" y2="0.645" width="0.05" layer="51"/>
+<wire x1="1.02" y1="0.645" x2="-1.02" y2="0.645" width="0.05" layer="51"/>
+<text x="-1.143" y="1.016" size="0.508" layer="25" ratio="6" rot="SR0">&gt;Name</text>
+<circle x="0.762" y="0" radius="0.1016" width="0.0762" layer="51"/>
+<circle x="1.524" y="0" radius="0.0762" width="0.2032" layer="21"/>
+</package>
 </packages>
 </library>
 <library name="SparkFun-DiscreteSemi">
@@ -15560,24 +15578,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <rectangle x1="2.7" y1="-1.5" x2="3.6" y2="-0.6" layer="31"/>
 <rectangle x1="0.6" y1="-1.5" x2="1.5" y2="-0.6" layer="31"/>
 </package>
-<package name="PD0922J5050S2HF_ANA">
-<smd name="1" x="0.65" y="0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
-<smd name="2" x="0" y="0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
-<smd name="3" x="-0.65" y="0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
-<smd name="4" x="-0.65" y="-0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
-<smd name="5" x="0" y="-0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
-<smd name="6" x="0.65" y="-0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
-<wire x1="-1.143" y1="0.762" x2="-1.143" y2="-0.762" width="0.1524" layer="21"/>
-<wire x1="1.143" y1="-0.762" x2="1.143" y2="0.762" width="0.1524" layer="21"/>
-<text x="-1.27" y="-1.651" size="0.508" layer="27" ratio="6" rot="SR0">&gt;Value</text>
-<wire x1="-1.02" y1="0.645" x2="-1.02" y2="-0.645" width="0.05" layer="51"/>
-<wire x1="-1.02" y1="-0.645" x2="1.02" y2="-0.645" width="0.05" layer="51"/>
-<wire x1="1.02" y1="-0.645" x2="1.02" y2="0.645" width="0.05" layer="51"/>
-<wire x1="1.02" y1="0.645" x2="-1.02" y2="0.645" width="0.05" layer="51"/>
-<text x="-1.143" y="1.016" size="0.508" layer="25" ratio="6" rot="SR0">&gt;Name</text>
-<circle x="0.762" y="0" radius="0.1016" width="0.0762" layer="51"/>
-<circle x="1.524" y="0" radius="0.0762" width="0.2032" layer="21"/>
-</package>
 </packages>
 </library>
 <library name="SparkFun-Batteries">
@@ -16321,7 +16321,8 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 </element>
 <element name="U$58" library="output" package="#ANT_PWR#0" value="" x="36.83" y="61.468" smashed="yes" rot="MR90"/>
 <element name="U$59" library="output" package="#ANT_PWR#1" value="" x="36.83" y="61.468" smashed="yes" rot="R270"/>
-<element name="U3" library="SparkFun-GPS" package="PD0922J5050S2HF_ANA" value="POWER-DIVIDER" x="26.67" y="31.75" smashed="yes" rot="R270">
+<element name="U3" library="SparkFun-RF" package="PD0922J5050S2HF_ANA" value="POWER-DIVIDER" x="26.67" y="31.75" smashed="yes" rot="R270">
+<attribute name="DIGI-KEY_PART_NUMBER_1" value="1173-1094-2-ND" x="26.67" y="31.75" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MANUFACTURER_PART_NUMBER" value="PD0922J5050S2HF" x="26.67" y="31.75" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
 <attribute name="NAME" x="27.686" y="32.893" size="0.508" layer="25" ratio="6" rot="SR270"/>
 <attribute name="PROD_ID" value="IC-16658" x="26.67" y="31.75" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
@@ -16805,7 +16806,8 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 </element>
 <element name="U$99" library="output" package="#ANT_PWR#0" value="" x="85.598" y="61.468" smashed="yes" rot="MR90"/>
 <element name="U$100" library="output" package="#ANT_PWR#1" value="" x="85.598" y="61.468" smashed="yes" rot="R270"/>
-<element name="U7" library="SparkFun-GPS" package="PD0922J5050S2HF_ANA" value="POWER-DIVIDER" x="75.438" y="31.75" smashed="yes" rot="R270">
+<element name="U7" library="SparkFun-RF" package="PD0922J5050S2HF_ANA" value="POWER-DIVIDER" x="75.438" y="31.75" smashed="yes" rot="R270">
+<attribute name="DIGI-KEY_PART_NUMBER_1" value="1173-1094-2-ND" x="75.438" y="31.75" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MANUFACTURER_PART_NUMBER" value="PD0922J5050S2HF" x="75.438" y="31.75" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
 <attribute name="NAME" x="76.454" y="32.893" size="0.508" layer="25" ratio="6" rot="SR270"/>
 <attribute name="PROD_ID" value="IC-16658" x="75.438" y="31.75" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
@@ -17289,7 +17291,8 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 </element>
 <element name="U$177" library="output" package="#ANT_PWR#0" value="" x="36.83" y="125.476" smashed="yes" rot="MR90"/>
 <element name="U$178" library="output" package="#ANT_PWR#1" value="" x="36.83" y="125.476" smashed="yes" rot="R270"/>
-<element name="U11" library="SparkFun-GPS" package="PD0922J5050S2HF_ANA" value="POWER-DIVIDER" x="26.67" y="95.758" smashed="yes" rot="R270">
+<element name="U11" library="SparkFun-RF" package="PD0922J5050S2HF_ANA" value="POWER-DIVIDER" x="26.67" y="95.758" smashed="yes" rot="R270">
+<attribute name="DIGI-KEY_PART_NUMBER_1" value="1173-1094-2-ND" x="26.67" y="95.758" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MANUFACTURER_PART_NUMBER" value="PD0922J5050S2HF" x="26.67" y="95.758" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
 <attribute name="NAME" x="27.686" y="96.901" size="0.508" layer="25" ratio="6" rot="SR270"/>
 <attribute name="PROD_ID" value="IC-16658" x="26.67" y="95.758" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
@@ -17773,7 +17776,8 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 </element>
 <element name="U$255" library="output" package="#ANT_PWR#0" value="" x="85.598" y="125.476" smashed="yes" rot="MR90"/>
 <element name="U$256" library="output" package="#ANT_PWR#1" value="" x="85.598" y="125.476" smashed="yes" rot="R270"/>
-<element name="U15" library="SparkFun-GPS" package="PD0922J5050S2HF_ANA" value="POWER-DIVIDER" x="75.438" y="95.758" smashed="yes" rot="R270">
+<element name="U15" library="SparkFun-RF" package="PD0922J5050S2HF_ANA" value="POWER-DIVIDER" x="75.438" y="95.758" smashed="yes" rot="R270">
+<attribute name="DIGI-KEY_PART_NUMBER_1" value="1173-1094-2-ND" x="75.438" y="95.758" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MANUFACTURER_PART_NUMBER" value="PD0922J5050S2HF" x="75.438" y="95.758" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
 <attribute name="NAME" x="76.454" y="96.901" size="0.508" layer="25" ratio="6" rot="SR270"/>
 <attribute name="PROD_ID" value="IC-16658" x="75.438" y="95.758" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>

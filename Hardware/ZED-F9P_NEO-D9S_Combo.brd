@@ -10,8 +10,8 @@
 <grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="2" name="Route2" color="63" fill="3" visible="yes" active="yes"/>
-<layer number="15" name="Route15" color="23" fill="6" visible="yes" active="yes"/>
+<layer number="2" name="Route2" color="63" fill="3" visible="no" active="yes"/>
+<layer number="15" name="Route15" color="23" fill="6" visible="no" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
@@ -25,8 +25,8 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
@@ -35,8 +35,8 @@
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
@@ -47,7 +47,7 @@
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="13" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="yes"/>
-<layer number="51" name="tDocu" color="6" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="no" active="no"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="no" active="no"/>
@@ -15457,10 +15457,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <rectangle x1="2.7" y1="-1.5" x2="3.6" y2="-0.6" layer="31"/>
 <rectangle x1="0.6" y1="-1.5" x2="1.5" y2="-0.6" layer="31"/>
 </package>
-</packages>
-</library>
-<library name="New_Parts">
-<packages>
 <package name="PD0922J5050S2HF_ANA">
 <smd name="1" x="0.65" y="0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
 <smd name="2" x="0" y="0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
@@ -16213,11 +16209,10 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <attribute name="REV" value="" x="72.39" y="1.27" size="1.778" layer="27" ratio="15" display="off"/>
 </element>
 <element name="LOGO5" library="SparkFun-Aesthetics" package="ORDERING_INSTRUCTIONS" value="SPECIAL_INSTRUCTIONS-ORDERING" x="54.61" y="63.5" smashed="yes"/>
-<element name="U3" library="New_Parts" package="PD0922J5050S2HF_ANA" value="POWER-DIVIDER" x="26.67" y="31.75" smashed="yes" rot="R270">
-<attribute name="DIGI-KEY_PART_NUMBER_1" value="1173-1094-2-ND" x="26.67" y="31.75" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
+<element name="U3" library="SparkFun-GPS" package="PD0922J5050S2HF_ANA" value="POWER-DIVIDER" x="26.67" y="31.75" smashed="yes" rot="R270">
 <attribute name="MANUFACTURER_PART_NUMBER" value="PD0922J5050S2HF" x="26.67" y="31.75" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
 <attribute name="NAME" x="27.686" y="32.893" size="0.508" layer="25" ratio="6" rot="SR270"/>
-<attribute name="PROD_ID" value="IC-16689" x="26.67" y="31.75" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
+<attribute name="PROD_ID" value="IC-16658" x="26.67" y="31.75" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
 <attribute name="VALUE" x="25.019" y="33.02" size="0.508" layer="27" ratio="6" rot="SR270"/>
 </element>
 <element name="U4" library="SparkFun-GPS" package="ZED-F9P" value="U-BLOX_ZED-F9P" x="22.86" y="19.05" smashed="yes" rot="R180">

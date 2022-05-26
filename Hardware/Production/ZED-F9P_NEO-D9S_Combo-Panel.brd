@@ -15560,10 +15560,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <rectangle x1="2.7" y1="-1.5" x2="3.6" y2="-0.6" layer="31"/>
 <rectangle x1="0.6" y1="-1.5" x2="1.5" y2="-0.6" layer="31"/>
 </package>
-</packages>
-</library>
-<library name="New_Parts">
-<packages>
 <package name="PD0922J5050S2HF_ANA">
 <smd name="1" x="0.65" y="0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
 <smd name="2" x="0" y="0.4826" dx="0.33" dy="0.41" layer="1" rot="R270"/>
@@ -16325,11 +16321,10 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 </element>
 <element name="U$58" library="output" package="#ANT_PWR#0" value="" x="36.83" y="61.468" smashed="yes" rot="MR90"/>
 <element name="U$59" library="output" package="#ANT_PWR#1" value="" x="36.83" y="61.468" smashed="yes" rot="R270"/>
-<element name="U3" library="New_Parts" package="PD0922J5050S2HF_ANA" value="POWER-DIVIDER" x="26.67" y="31.75" smashed="yes" rot="R270">
-<attribute name="DIGI-KEY_PART_NUMBER_1" value="1173-1094-2-ND" x="26.67" y="31.75" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
+<element name="U3" library="SparkFun-GPS" package="PD0922J5050S2HF_ANA" value="POWER-DIVIDER" x="26.67" y="31.75" smashed="yes" rot="R270">
 <attribute name="MANUFACTURER_PART_NUMBER" value="PD0922J5050S2HF" x="26.67" y="31.75" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
 <attribute name="NAME" x="27.686" y="32.893" size="0.508" layer="25" ratio="6" rot="SR270"/>
-<attribute name="PROD_ID" value="IC-16689" x="26.67" y="31.75" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
+<attribute name="PROD_ID" value="IC-16658" x="26.67" y="31.75" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
 <attribute name="VALUE" x="25.019" y="33.02" size="0.508" layer="27" ratio="6" rot="SR270"/>
 </element>
 <element name="U4" library="SparkFun-GPS" package="ZED-F9P" value="U-BLOX_ZED-F9P" x="22.86" y="19.05" smashed="yes" rot="R180">
@@ -16810,11 +16805,10 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 </element>
 <element name="U$99" library="output" package="#ANT_PWR#0" value="" x="85.598" y="61.468" smashed="yes" rot="MR90"/>
 <element name="U$100" library="output" package="#ANT_PWR#1" value="" x="85.598" y="61.468" smashed="yes" rot="R270"/>
-<element name="U7" library="New_Parts" package="PD0922J5050S2HF_ANA" value="POWER-DIVIDER" x="75.438" y="31.75" smashed="yes" rot="R270">
-<attribute name="DIGI-KEY_PART_NUMBER_1" value="1173-1094-2-ND" x="75.438" y="31.75" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
+<element name="U7" library="SparkFun-GPS" package="PD0922J5050S2HF_ANA" value="POWER-DIVIDER" x="75.438" y="31.75" smashed="yes" rot="R270">
 <attribute name="MANUFACTURER_PART_NUMBER" value="PD0922J5050S2HF" x="75.438" y="31.75" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
 <attribute name="NAME" x="76.454" y="32.893" size="0.508" layer="25" ratio="6" rot="SR270"/>
-<attribute name="PROD_ID" value="IC-16689" x="75.438" y="31.75" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
+<attribute name="PROD_ID" value="IC-16658" x="75.438" y="31.75" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
 <attribute name="VALUE" x="73.787" y="33.02" size="0.508" layer="27" ratio="6" rot="SR270"/>
 </element>
 <element name="U8" library="SparkFun-GPS" package="ZED-F9P" value="U-BLOX_ZED-F9P" x="71.628" y="19.05" smashed="yes" rot="R180">
@@ -17295,11 +17289,10 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 </element>
 <element name="U$177" library="output" package="#ANT_PWR#0" value="" x="36.83" y="125.476" smashed="yes" rot="MR90"/>
 <element name="U$178" library="output" package="#ANT_PWR#1" value="" x="36.83" y="125.476" smashed="yes" rot="R270"/>
-<element name="U11" library="New_Parts" package="PD0922J5050S2HF_ANA" value="POWER-DIVIDER" x="26.67" y="95.758" smashed="yes" rot="R270">
-<attribute name="DIGI-KEY_PART_NUMBER_1" value="1173-1094-2-ND" x="26.67" y="95.758" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
+<element name="U11" library="SparkFun-GPS" package="PD0922J5050S2HF_ANA" value="POWER-DIVIDER" x="26.67" y="95.758" smashed="yes" rot="R270">
 <attribute name="MANUFACTURER_PART_NUMBER" value="PD0922J5050S2HF" x="26.67" y="95.758" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
 <attribute name="NAME" x="27.686" y="96.901" size="0.508" layer="25" ratio="6" rot="SR270"/>
-<attribute name="PROD_ID" value="IC-16689" x="26.67" y="95.758" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
+<attribute name="PROD_ID" value="IC-16658" x="26.67" y="95.758" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
 <attribute name="VALUE" x="25.019" y="97.028" size="0.508" layer="27" ratio="6" rot="SR270"/>
 </element>
 <element name="U12" library="SparkFun-GPS" package="ZED-F9P" value="U-BLOX_ZED-F9P" x="22.86" y="83.058" smashed="yes" rot="R180">
@@ -17780,11 +17773,10 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 </element>
 <element name="U$255" library="output" package="#ANT_PWR#0" value="" x="85.598" y="125.476" smashed="yes" rot="MR90"/>
 <element name="U$256" library="output" package="#ANT_PWR#1" value="" x="85.598" y="125.476" smashed="yes" rot="R270"/>
-<element name="U15" library="New_Parts" package="PD0922J5050S2HF_ANA" value="POWER-DIVIDER" x="75.438" y="95.758" smashed="yes" rot="R270">
-<attribute name="DIGI-KEY_PART_NUMBER_1" value="1173-1094-2-ND" x="75.438" y="95.758" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
+<element name="U15" library="SparkFun-GPS" package="PD0922J5050S2HF_ANA" value="POWER-DIVIDER" x="75.438" y="95.758" smashed="yes" rot="R270">
 <attribute name="MANUFACTURER_PART_NUMBER" value="PD0922J5050S2HF" x="75.438" y="95.758" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
 <attribute name="NAME" x="76.454" y="96.901" size="0.508" layer="25" ratio="6" rot="SR270"/>
-<attribute name="PROD_ID" value="IC-16689" x="75.438" y="95.758" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
+<attribute name="PROD_ID" value="IC-16658" x="75.438" y="95.758" size="1.778" layer="27" ratio="15" rot="R270" display="off"/>
 <attribute name="VALUE" x="73.787" y="97.028" size="0.508" layer="27" ratio="6" rot="SR270"/>
 </element>
 <element name="U16" library="SparkFun-GPS" package="ZED-F9P" value="U-BLOX_ZED-F9P" x="71.628" y="83.058" smashed="yes" rot="R180">

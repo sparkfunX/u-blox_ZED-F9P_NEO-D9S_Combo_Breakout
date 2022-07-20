@@ -12922,7 +12922,6 @@ high temperature heat resistance.
 <part name="R27" library="SparkFun-Resistors" deviceset="1KOHM" device="-0603-1/10W-1%" value="1k"/>
 <part name="LED2" library="SparkFun-LED" deviceset="LED-BLUE" device="0603" value="BLUE"/>
 <part name="RTK" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39281/1" value="JUMPER-SMT_2_NC_TRACE_SILK"/>
-<part name="GND24" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="R28" library="SparkFun-Resistors" deviceset="1KOHM" device="-0603-1/10W-1%" value="1k"/>
 <part name="LED3" library="SparkFun-LED" deviceset="LED-BLUE" device="0603" value="BLUE"/>
 <part name="GEO" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39281/1" value="JUMPER-SMT_2_NC_TRACE_SILK"/>
@@ -12973,11 +12972,12 @@ high temperature heat resistance.
 <part name="SUPPLY25" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="U$77" library="SparkX" deviceset="SPARKX-LOGO" device="4"/>
 <part name="U$78" library="SparkX" deviceset="SPARKX-LOGO" device="4"/>
+<part name="P+2" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="420.624" y="7.366" size="2.54" layer="94" font="vector">x01</text>
+<text x="420.624" y="7.366" size="2.54" layer="94" font="vector">x02</text>
 <text x="187.96" y="210.82" size="1.778" layer="97" font="vector" align="center">7-bit unshifted I2C address: 0x43</text>
 <wire x1="0" y1="121.92" x2="68.58" y2="121.92" width="0.1524" layer="97" style="shortdash"/>
 <text x="106.68" y="93.98" size="1.778" layer="97" font="vector">Close jumper to add
@@ -13432,9 +13432,6 @@ ZED-F9P &lt;-&gt; NEO-D9S</text>
 <instance part="RTK" gate="G$1" x="35.56" y="68.58" smashed="yes">
 <attribute name="NAME" x="33.528" y="70.739" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="GND24" gate="1" x="15.24" y="63.5" smashed="yes">
-<attribute name="VALUE" x="15.24" y="63.246" size="1.778" layer="96" font="vector" align="top-center"/>
-</instance>
 <instance part="R28" gate="G$1" x="48.26" y="50.8" smashed="yes">
 <attribute name="NAME" x="44.577" y="48.641" size="1.778" layer="95" font="vector" align="bottom-center"/>
 <attribute name="VALUE" x="52.832" y="50.292" size="1.778" layer="96" font="vector" align="top-center"/>
@@ -13601,6 +13598,9 @@ ZED-F9P &lt;-&gt; NEO-D9S</text>
 </instance>
 <instance part="U$77" gate="G$1" x="383.54" y="48.26" smashed="yes"/>
 <instance part="U$78" gate="G$1" x="383.54" y="48.26" smashed="yes"/>
+<instance part="P+2" gate="G$1" x="55.88" y="71.12" smashed="yes">
+<attribute name="VALUE" x="55.88" y="73.914" size="1.778" layer="96" font="vector" align="bottom-center"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -13714,6 +13714,12 @@ ZED-F9P &lt;-&gt; NEO-D9S</text>
 <pinref part="C11" gate="G$1" pin="2"/>
 <pinref part="SUPPLY25" gate="G$1" pin="3.3V"/>
 <wire x1="137.16" y1="246.38" x2="137.16" y2="248.92" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R27" gate="G$1" pin="2"/>
+<wire x1="53.34" y1="68.58" x2="55.88" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="P+2" gate="G$1" pin="3.3V"/>
+<wire x1="55.88" y1="68.58" x2="55.88" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -13845,12 +13851,6 @@ ZED-F9P &lt;-&gt; NEO-D9S</text>
 <pinref part="GND21" gate="1" pin="GND"/>
 <wire x1="25.4" y1="243.84" x2="25.4" y2="241.3" width="0.1524" layer="91"/>
 <pinref part="C8" gate="G$1" pin="1"/>
-</segment>
-<segment>
-<pinref part="LED2" gate="G$1" pin="C"/>
-<wire x1="15.24" y1="68.58" x2="20.32" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="GND24" gate="1" pin="GND"/>
-<wire x1="15.24" y1="66.04" x2="15.24" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="LED3" gate="G$1" pin="C"/>
@@ -14527,14 +14527,14 @@ ZED-F9P &lt;-&gt; NEO-D9S</text>
 <label x="96.52" y="223.52" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<label x="55.88" y="68.58" size="1.27" layer="95" xref="yes"/>
-<pinref part="R27" gate="G$1" pin="2"/>
-<wire x1="55.88" y1="68.58" x2="53.34" y2="68.58" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="J5" gate="J1" pin="4"/>
 <wire x1="175.26" y1="25.4" x2="172.72" y2="25.4" width="0.1524" layer="91"/>
 <label x="172.72" y="25.4" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="LED2" gate="G$1" pin="C"/>
+<wire x1="20.32" y1="68.58" x2="15.24" y2="68.58" width="0.1524" layer="91"/>
+<label x="15.24" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="GEO" class="0">

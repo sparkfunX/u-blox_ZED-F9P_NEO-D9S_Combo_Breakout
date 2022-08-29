@@ -1,5 +1,4 @@
-SparkX u-blox ZED-F9P NEO-D9S Combo Breakout
-========================================
+# SparkX u-blox ZED-F9P NEO-D9S Combo Breakout
 
 <p align="center">
   <a href="https://github.com/sparkfunX/u-blox_ZED-F9P_NEO-D9S_Combo_Breakout/issues" alt="Issues">
@@ -22,12 +21,11 @@ accuracy positioning without needing separate RTK or NTRIP corrections.
 
 The Combo Breakout is designed to work with u-blox's PointPerfect L-band satellite GNSS augmentation service, which provides homogeneous coverage in contiguous USA and Europe.
 
-**Please note:**
+## Important Note:
 
 u-blox provides products and services to "B2B Customers". Only business customers are eligible to register for a Thingstream (PointPerfect) account. You may be required to demonstrate that the use of the combo breakout is in relation to your trade, business, craft or profession. u-blox products and services are not intended for individual consumer use.
 
-Repository Contents
--------------------
+## Repository Contents
 
 * **[/docs](/docs/)** - Online documentation files
     * [board_files](/docs/board_files/) - Files for the product design
@@ -37,16 +35,15 @@ Repository Contents
     * [img/hookup_guide/](/docs/img/hookup_guide/) - Images for hookup guide documentation
 * **[/Hardware](/Hardware/)** - Eagle design files (.brd, .sch)
 
-Documentation
---------------
+## Documentation
+
 * **[Hookup Guide (mkdocs)](http://docs.sparkfunx.com/u-blox_ZED-F9P_NEO-D9S_Combo_Breakout/)** - Hookup guide for the SparkX u-blox ZED-F9P NEO-D9S Combo Breakout hosted by GitHub pages.
 
-Product Versions
-----------------
+## Product Versions
+
 * [SPX-20167](https://www.sparkfun.com/products/20167) - Initial SparkX Release
 
-License Information
--------------------
+## License Information
 
 This product is _**open source**_! 
 

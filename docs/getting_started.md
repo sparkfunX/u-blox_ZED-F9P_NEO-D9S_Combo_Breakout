@@ -79,7 +79,7 @@ These two ESP32 development boards support: Qwiic, Serial, WiFi, microSD and Li-
         </td>
         <td>
             <a href="https://www.sparkfun.com/products/19177">
-                <center><img src="https://cdn.sparkfun.com//assets/parts/9/7/2/9/12861-01.jpg" alt="SparkFun IoT RedBoard - ESP32 Development Board" height="140">
+                <center><img src="https://cdn.sparkfun.com//assets/parts/1/8/8/0/0/ESP32_03.jpg" alt="SparkFun IoT RedBoard - ESP32 Development Board" height="140">
                 </center>
                 <h3 class="title">SparkFun IoT RedBoard - ESP32 Development Board</h3>
             </a>

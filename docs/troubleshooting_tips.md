@@ -6,7 +6,7 @@
     </center>
     <p>You'll need a <a href="https://forum.sparkfun.com/ucp.php?mode=register">Forum Account</a> to search the product forums and post questions.<p>
 
-!!! warning
+!!! attention
     u-blox provides products and services to "B2B Customers". Only business customers are eligible to register for a Thingstream (PointPerfect) account. You may be required to demonstrate that the use of the combo breakout is in relation to your trade, business, craft or profession. u-blox products and services are not intended for individual consumer use.
 
 ## PointPerfect L-band Reception

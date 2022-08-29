@@ -10,6 +10,7 @@ For more resources related to the SparkX u-blox ZED-F9P NEO-D9S Combo Breakout, 
 u-blox resources: 
 
 * [NEO-D9S and ZED-F9 configuration - SPARTN L-band correction data reception](https://www.u-blox.com/sites/default/files/documents/NEO-D9S_ZED-F9_Config_SPARTN_AppNote_UBX-22008160.pdf)
+* [u-blox u-center - GNSS evaluation software for Windows](https://www.u-blox.com/en/product/u-center)
 * [PointPerfect GNSS augmentation service](https://www.u-blox.com/en/product/pointperfect)
 * [PointPerfect Product Summary](https://www.u-blox.com/sites/default/files/PointPerfect_ProductSummary_UBX-21024758.pdf)
 * [PointPerfect Service Description](https://developer.thingstream.io/guides/location-services/pointperfect-service-description)

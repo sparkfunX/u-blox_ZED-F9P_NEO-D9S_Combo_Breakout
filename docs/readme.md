@@ -1,1 +1,1 @@
-This folder contains the assets and markdown files for the [SparkX u-blox ZED-F9P NEO-D9S Combo Breakout Product Manual](https://docs.sparkfunx.com/u-blox_ZED-F9P_NEO-D9S_Combo_Breakout) that are rendered with [mkdocs](https://www.mkdocs.org/).
+This folder contains the assets and markdown files for the [SparkX u-blox ZED-F9P NEO-D9S Combo Breakout Product Manual](https://sparkfunx.github.io/u-blox_ZED-F9P_NEO-D9S_Combo_Breakout) that are rendered with [mkdocs](https://www.mkdocs.org/).

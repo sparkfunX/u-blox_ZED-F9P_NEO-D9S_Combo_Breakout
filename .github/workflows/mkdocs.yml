@@ -1,4 +1,4 @@
-name: Run mkdocs
+name: mkdocs
 on:
   push:
     branches:
@@ -6,6 +6,7 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
 jobs:
   deploy:
     runs-on: ubuntu-latest

@@ -110,8 +110,6 @@ void setup()
 {
   serialQUAD.begin(115200);
   delay(1000);
-  serialQUAD.println(F("SparkFun ZED-F9P NEO-D9S Combo Board Test Procedure"));
-  serialQUAD.println();
 
   // Enable power for the Qwiic bus
   // The input pull-up is enough to enable the regulator
@@ -128,6 +126,8 @@ void setup()
   //mySensors.enableDebugging(serialQUAD); // Uncomment this line to enable debug messages on serialQUAD
 
   mySensors.setMenuPort(serialQUAD); // Use serialQUAD for the logging menu
+
+  mySensors.theMenu.setMenuTimeout(60000); // Set the menu timeout to 60 seconds
   
   if (!mySensors.beginStorage()) // Begin EEPROM storage
     serialQUAD.println(F("beginStorage failed! You will not be able to read or write the sensor configuration..."));
@@ -148,8 +148,8 @@ void setup()
   // You can duplicate NONE or SUB_MENU_START items (e.g. "Wifi Menu") but all other items must be unique
 
   mySensors.theMenu.addMenuItem("", SFE_QUAD_MENU_VARIABLE_TYPE_NONE);
-  mySensors.theMenu.addMenuItem("Menu", SFE_QUAD_MENU_VARIABLE_TYPE_NONE);
-  mySensors.theMenu.addMenuItem("====", SFE_QUAD_MENU_VARIABLE_TYPE_NONE);
+  mySensors.theMenu.addMenuItem("SparkFun ZED-F9P NEO-D9S Combo Board Test", SFE_QUAD_MENU_VARIABLE_TYPE_NONE);
+  mySensors.theMenu.addMenuItem("=========================================", SFE_QUAD_MENU_VARIABLE_TYPE_NONE);
   mySensors.theMenu.addMenuItem("", SFE_QUAD_MENU_VARIABLE_TYPE_NONE);
   mySensors.theMenu.addMenuItem("", SFE_QUAD_MENU_VARIABLE_TYPE_NONE);
   mySensors.theMenu.addMenuItem("Test a board", testTheBoard);
@@ -198,7 +198,7 @@ void setup()
   mySensors.theMenu.setMenuItemVariable("L-Band Dynamic Key", "5002d290058c8c24ed00635144d53177"); // Set the default L-Band Token - this will be updated by readLoggerConfig
   mySensors.theMenu.addMenuItem("Valid From GPS Week", SFE_QUAD_MENU_VARIABLE_TYPE_UINT16_T);
   SFE_QUAD_Menu_Every_Type_t defaultValue;
-  defaultValue.UINT16_T = 2224;
+  defaultValue.UINT16_T = 2224; // Valid from August 27th 2022. Expires: 23:59 (UTC) Sep 23, 2022
   mySensors.theMenu.setMenuItemVariable("Valid From GPS Week", &defaultValue); // Set the default valid from week no.
   mySensors.theMenu.addMenuItem("", SFE_QUAD_MENU_VARIABLE_TYPE_NONE);
   mySensors.theMenu.addMenuItem("", SFE_QUAD_MENU_VARIABLE_TYPE_SUB_MENU_END); // End of the sub-menu
@@ -348,14 +348,14 @@ void testTheBoard(void)
   }
 
   //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-  // Wait for up to 10 seconds for the fix type to be 3D
+  // Wait for up to 20 seconds for the fix type to be 3D
 
   serialQUAD.print(F("Waiting for a 3D fix"));
   
   unsigned long startTime = millis();
   byte fixType = 0;
 
-  while ((fixType != 3) && (millis() < (startTime + 10000)))
+  while ((fixType != 3) && (millis() < (startTime + 20000)))
   {
     delay(500);
     
@@ -374,6 +374,12 @@ void testTheBoard(void)
 
   serialQUAD.println(F("Got a 3D Fix!"));
 
+  serialQUAD.println();
+
+  serialQUAD.println(F("Please check that the TP LED is flashing. Please fail the board if not."));
+
+  serialQUAD.println();
+
   //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
   // Configure the SPARTN IP Dynamic Keys
   // "When the receiver boots, the host should send 'current' and 'next' keys in one message." - Use setDynamicSPARTNKeys for this.
@@ -382,7 +388,7 @@ void testTheBoard(void)
   // The key can be provided in binary (uint8_t) format or in ASCII Hex (char) format, but in both cases keyLengthBytes _must_ represent the binary key length in bytes.
 
   char currentDynamicKey[33];
-  mySensors.theMenu.getMenuItemVariable("AssistNow Token", currentDynamicKey, 33);
+  mySensors.theMenu.getMenuItemVariable("L-Band Dynamic Key", currentDynamicKey, 33);
 
   SFE_QUAD_Menu_Every_Type_t currentKeyGPSWeek;
   mySensors.theMenu.getMenuItemVariable("Valid From GPS Week", &currentKeyGPSWeek); // Get the currentKeyGPSWeek
@@ -428,14 +434,14 @@ void testTheBoard(void)
   myLBand.setRXMPMPcallbackPtr(&printRXMPMP); // Call printRXMPMP when new PMP data arrives
 
   //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-  // Wait for up to 10 seconds for the fix type to be 3D
+  // Wait for up to 20 seconds PMP data to arrive
 
   serialQUAD.print(F("Waiting for PMP data"));
   
   startTime = millis();
   pmpDataSeen = false;
 
-  while ((!pmpDataSeen) && (millis() < (startTime + 10000)))
+  while ((!pmpDataSeen) && (millis() < (startTime + 20000)))
   {
     serialQUAD.print(F("."));
 
@@ -456,7 +462,24 @@ void testTheBoard(void)
 
   //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-  serialQUAD.println(F("TEST PASSED!"));
+  serialQUAD.println(F("If the L-Band Dynamic Key is valid, and you have a good L-Band signal, the NEO will be pushing corrections to the ZED."));
+  serialQUAD.println();
+  serialQUAD.println(F("If you see the RTK LED flash, you have a FLOAT solution. That's an excellent thing!"));
+  serialQUAD.println();
+  serialQUAD.println(F("If the RTK LED stays on continuously (on the x02 PCB) then you have a FIXED solution. That's a _really_ excellent thing!"));
+
+  serialQUAD.println();
+  serialQUAD.println();
+
+  serialQUAD.println(F("Please measure the voltage of the back-up battery. Measure between the top of the battery and GND. It should be around 2.5V."));
+
+  serialQUAD.println();
+  serialQUAD.println();
+
+  serialQUAD.println(F("If the battery voltage is OK - TEST PASSED!"));
+
+  serialQUAD.println();
+
 }
         
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -508,7 +531,7 @@ void wifiConnect(void)
 
   WiFi.begin(ssid, password);
 
-  const unsigned long wifiConnectTimeout = 10000; // Allow 10s for WiFi connection
+  const unsigned long wifiConnectTimeout = 20000; // Allow 10s for WiFi connection
   unsigned long startTime = millis();
   
   while ((WiFi.status() != WL_CONNECTED) && (millis() < (startTime + wifiConnectTimeout)))

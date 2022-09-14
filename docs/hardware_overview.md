@@ -1,4 +1,4 @@
-# Hardware Overview
+## Hardware Overview
 
 <center>
 [![Combo Breakout PCB](./img/hookup_guide/Top.png){ width="200" }](./img/hookup_guide/Top.png)<br>
@@ -118,7 +118,7 @@ With the SMA connector oriented to the 'top', the breakout pads down the left si
     </tr>
     <tr>
         <td style="vertical-align:middle" align="center"><b>ANT_PWR</b></td>
-        <td style="vertical-align:middle" align="center">External antenna power<br>Cut the <b>ANT_VCC<b> trace and install L1 to enable</td>
+        <td style="vertical-align:middle" align="center">External antenna power<br>Cut the <b>ANT_VCC</b> trace and install L1 to enable</td>
     </tr>
     <tr>
         <td style="vertical-align:middle" align="center"><b>EXT_INT_NEO</b></td>
@@ -300,14 +300,14 @@ If your antenna requires a higher voltage (or current):
 * Isolate **VCC_RF** by cutting the trace marked by the arrow symbols on the top of the PCB
 
 <center>
-[![Jumpers](./img/hookup_guide/VCC_RF.png){ width="200" }](./img/hookup_guide/VCC_RF.png)<br>
+[![VCC_RF](./img/hookup_guide/VCC_RF.png){ width="200" }](./img/hookup_guide/VCC_RF.png)<br>
 *The VCC_RF trace. (Click to enlarge)*
 </center>
 
 * Install inductor L1 - using a 0603 inductor with impedance >500 Ohms at 1.5 GHz
 
 <center>
-[![Jumpers](./img/hookup_guide/L1.png){ width="200" }](./img/hookup_guide/L1.png)<br>
+[![L1](./img/hookup_guide/L1.png){ width="200" }](./img/hookup_guide/L1.png)<br>
 *The position of L1. (Click to enlarge)*
 </center>
 

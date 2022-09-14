@@ -6,8 +6,8 @@ For more resources related to the SparkX u-blox ZED-F9P NEO-D9S Combo Breakout, 
 * [Eagle Files](./board_files/ZED-F9P_NEO-D9S_Combo_x02.zip) (ZIP)
 * [Board Dimensions](./board_files/Dimensions.png) (PNG)
 * [SparkFun u-blox GNSS Arduino Library](https://github.com/sparkfun/SparkFun_u-blox_GNSS_Arduino_Library)
-  * [L-Band correction with correction data push via I<sup>2</sup>C](https://github.com/sparkfun/SparkFun_u-blox_GNSS_Arduino_Library/tree/main/examples/ZED-F9P/Example19_LBand_Corrections_with_NEO-D9S). The I<sup>2</sup>C push is not necessary on the combo breakout. The correction data will be transferred automatically via UART2.
-  * [L-Band correction with key retrieval via MQTT](https://github.com/sparkfun/SparkFun_u-blox_GNSS_Arduino_Library/tree/main/examples/ZED-F9P/Example20_PMP_with_L-Band_Keys_via_MQTT)
+    * [Example: L-Band correction with correction data push via I<sup>2</sup>C](https://github.com/sparkfun/SparkFun_u-blox_GNSS_Arduino_Library/tree/main/examples/ZED-F9P/Example19_LBand_Corrections_with_NEO-D9S). The I<sup>2</sup>C push is not necessary on the combo breakout. The correction data will be transferred automatically via UART2.
+    * [Example: L-Band correction with key retrieval via MQTT](https://github.com/sparkfun/SparkFun_u-blox_GNSS_Arduino_Library/tree/main/examples/ZED-F9P/Example20_PMP_with_L-Band_Keys_via_MQTT)
 
 u-blox resources: 
 

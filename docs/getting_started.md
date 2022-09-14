@@ -27,7 +27,7 @@ and log data from the ZED-F9P, all you need to get started is a pair of USB cabl
     </tr>
 </table>
 
-The Combo Breakout has a single female SMA socket connection for the antenna as the ZED-F9P and NEO-D9S share a single antenna. Our TOP-106 antenna has a TNC connection,
+The Combo Breakout has a single female SMA socket for the antenna connection. An on-board splitter (power divider) allows the ZED-F9P and NEO-D9S to share a single antenna. You need an antenna which supports both L1 and L2 GNSS, and which also provides broad coverage of the L-Band for the correction signal. Our TOP-106 antenna is a good choice. It has a TNC connection,
 so you may also want to purchase a SMA to TNC interface cable and/or a SMA female to male extension cable, depending on your needs:
 
 <table style="border-style:none">
@@ -56,15 +56,15 @@ It is also possible to power the board and communicate with it using I<sup>2</su
 SparkFun's [Qwiic Connect System](https://www.sparkfun.com/qwiic) uses 4-pin JST connectors, allowing you to quickly interface your development board to the Combo Board.
 
 Our [u-blox GNSS Arduino Library](https://github.com/sparkfun/SparkFun_u-blox_GNSS_Arduino_Library) contains a comprehensive set of tried and tested examples that will work
-on any Qwiic-enabled development board. There are even dedicated examples for the ZED-F9P and NEO-D9S.
+on any Qwiic-enabled development board. There are dedicated examples for the ZED-F9P and NEO-D9S.
 
-You can also use 3.3V Serial (UART) to communicate with both the ZED-F9P and NEO-D9S. Our Arduino Library supports Serial and I<sup>2</sup>C. (It supports SPI too, but SPI
+You can also use 3.3V Serial (UART) to communicate with both the ZED-F9P and NEO-D9S. Our Arduino Library supports both Serial and I<sup>2</sup>C. (It supports SPI too, but SPI
 is not supported on the Combo Breakout).
 
-When choosing a development board, you might want to choose one which has built-in WiFi. A WiFi connection will allow you to download the PointPerfect SPARTN encryption keys
-directly from u-blox's Thingstream IoT service using MQTT.
+When choosing a development board, you might want to choose one which has built-in WiFi. The correction data received by the NEO-D9S is encrypted, you need to pass keys to the
+ZED-F9P so it can decrypt the data. A WiFi connection will allow you to download the PointPerfect SPARTN encryption keys directly from u-blox's Thingstream IoT service using MQTT.
 
-You might also find a microSD card socket useful for data logging. If you want to log data out in the field, being able to connect a Li-Po battery will be useful too.
+You might also find a microSD card socket useful for data logging. If you want to log data while you are out in the field, being able to connect a Li-Po battery will be useful too.
 
 These two ESP32 development boards support: Qwiic, Serial, WiFi, microSD and Li-Po.
 

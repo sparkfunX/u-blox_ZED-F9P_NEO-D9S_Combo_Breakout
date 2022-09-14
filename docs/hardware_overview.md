@@ -1,31 +1,85 @@
 # Hardware Overview
 
+<center>
+[![Combo Breakout PCB](./img/hookup_guide/Top.png){ width="200" }](./img/hookup_guide/Top.png)<br>
+*The Combo Breakout PCB. (Click to enlarge)*
+</center>
+
 The u-blox ZED-F9P NEO-D9S Combo Breakout is a sophisticated yet compact GNSS board. The following is a summary of its features and functions:
 
-* **`ZED-F9P`** - The ZED-F9P is a top-of-the-line module for high accuracy GNSS and GPS location solutions
+* **`ZED-F9P`** - the ZED-F9P is a top-of-the-line module for high accuracy GNSS and GPS location solutions
     * Concurrent reception of GPS, GLONASS, Galileo and BeiDou
     * Multi-band RTK with fast convergence times and reliable performance
     * Centimeter-level accuracy in a small and energy-efficient module
-* **`NEO-D9S`** - The NEO-D9S is a satellite data receiver for L-band correction broadcast
+
+<center>
+[![ZED-F9P](./img/hookup_guide/ZED-F9P.png){ width="200" }](./img/hookup_guide/ZED-F9P.png)<br>
+*The ZED-F9P GNSS module. (Click to enlarge)*
+</center>
+
+* **`NEO-D9S`** - the NEO-D9S is a satellite data receiver for L-band correction broadcast
     * The NEO-D9S can be configured for use with a variety of L-band correction services including u-blox's PointPerfect service
     * It decodes the satellite transmission and outputs a correction stream directly to the ZED-F9P via UART2
-* **`UART2 TX and RX`** - The ZED-F9P and NEO-D9S UART2 TX and RX are interconnected (crossed-over) to allow the NEO to feed corrections directly to the ZED
+
+<center>
+[![NEO-D9S](./img/hookup_guide/NEO-D9S.png){ width="200" }](./img/hookup_guide/NEO-D9S.png)<br>
+*The NEO-D9S correction data receiver. (Click to enlarge)*
+</center>
+
+* **`UART2 TX and RX`** - the ZED-F9P and NEO-D9S UART2 TX and RX are interconnected (crossed-over) to allow the NEO to feed corrections directly to the ZED
     * The UART2 pins can be isolated if required by opening the **TX2** and **RX2** jumpers
-* **`Antenna Power Divider`** - The breakout has an on-board power divider (antenna splitter) to divide the satellite signals between the ZED and the NEO
+    * Using UART2 to pass the correction data is recommended, but is optional. You can, if desired, use UART1 or I<sup>2</sup>C instead. Our u-blox Arduino Library has an example which shows how to read the correction data from the NEO-D9S and push it to the ZED-F9P using I<sup>2</sup>C.
+
+<center>
+[![UART2](./img/hookup_guide/UART2.png){ width="200" }](./img/hookup_guide/UART2.png)<br>
+*The UART2 connections. (Click to enlarge)*
+</center>
+
+* **`Antenna Power Divider`** - the breakout has an on-board power divider (antenna splitter) to divide the satellite signals between the ZED and the NEO
     * The connector is SMA female (standard polarity)
     * 3.3V power is provided for an active antenna
-* **`Dual USB-C connections`** - One provides a direct connection to the ZED-F9P; the seconds provides a direct connection to the NEO-D9S
+
+<center>
+[![Splitter](./img/hookup_guide/Splitter.png){ width="200" }](./img/hookup_guide/Splitter.png)<br>
+*The antenna splitter (power divider). (Click to enlarge)*
+</center>
+
+* **`Dual USB-C connections`** - one USB-C connector provides a direct connection to the ZED-F9P; the second provides a direct connection to the NEO-D9S
     * The board can be powered via either USB-C connector, or both
-    * There is no on-board USB hub. Both ports can be connected to the same computer, or different computers if desired
-* **`LED Indicators`** - The breakout has four LED indicators:
-    * Power
-    * RTK: Off = No Carrier Solution; Flashing = Floating Solution; On = Fixed Solution
-    * GEO: Geofence indication
-    * TP: Timing Pulse (Pulse Per Second)
+    * There is no on-board USB hub. Both ports can be connected simultaneously to the same computer, or different computers if desired
+
+<center>
+[![USB Connectors](./img/hookup_guide/USB-C.png){ width="200" }](./img/hookup_guide/USB-C.png)<br>
+*The two USB-C connectors. (Click to enlarge)*
+</center>
+
+* **`LED Indicators`** - the breakout has four LED indicators:
+    * **3V3** Power
+    * **RTK**: Off = No Carrier Solution; Flashing = Floating Solution; On = Fixed Solution
+    * **GEO**: Geofence indication
+    * **TP**: Timing Pulse (Pulse Per Second)
     * Each LED can be disabled by opening the corresponding split pad jumper on the bottom of the breakout
-* **`Dual Qwiic Connectors`** - The breakout has two Qwiic (I<sup>2</sup>C) connectors allowing the breakout to be daisy-chained
-* **`Back-up Battery`** - A small rechargeable coin cell maintains the ZED-F9P battery-backed RAM while the power is disconnected
-* **`Full set of breakout pads`** - The breakout pads provide full access to the ZED-F9P and NEO-D9S pins 
+
+<center>
+[![LEDs](./img/hookup_guide/LEDs.png){ width="200" }](./img/hookup_guide/LEDs.png)<br>
+*The LEDs. (Click to enlarge)*
+</center>
+
+* **`Dual Qwiic Connectors`** - the breakout has two Qwiic (I<sup>2</sup>C) connectors allowing the breakout to be daisy-chained into your Qwiic project
+
+<center>
+[![Qwiic Connectors](./img/hookup_guide/Qwiic.png){ width="200" }](./img/hookup_guide/Qwiic.png)<br>
+*The two Qwiic connectors. (Click to enlarge)*
+</center>
+
+* **`Back-up Battery`** - a small rechargeable coin cell maintains the ZED-F9P battery-backed RAM while the power is disconnected
+
+<center>
+[![Back-up Battery](./img/hookup_guide/Battery.png){ width="200" }](./img/hookup_guide/Battery.png)<br>
+*The rechargeable back-up battery. (Click to enlarge)*
+</center>
+
+* **`Full set of breakout pads`** - the breakout pads provide full access to the ZED-F9P and NEO-D9S pins 
     * I<sup>2</sup>C
     * UART1
     * UART2
@@ -34,6 +88,11 @@ The u-blox ZED-F9P NEO-D9S Combo Breakout is a sophisticated yet compact GNSS bo
     * Safeboot
     * ZED-F9P: TX_RDY, TP, GEO, RTK
     * Power: 5V and 3.3V
+
+<center>
+[![Breakout Pads](./img/hookup_guide/Pads.png){ width="200" }](./img/hookup_guide/Pads.png)<br>
+*The breakout pads. (Click to enlarge)*
+</center>
 
 ## Board Dimensions
 
@@ -58,12 +117,12 @@ With the SMA connector oriented to the 'top', the breakout pads down the left si
         </th>
     </tr>
     <tr>
-        <td style="vertical-align:middle" align="center"><b>ANT PWR</b></td>
-        <td style="vertical-align:middle" align="center">External antenna power<br>Cut the <b>ANT_VCC<b> trace<br>and install L1 to enable</td>
+        <td style="vertical-align:middle" align="center"><b>ANT_PWR</b></td>
+        <td style="vertical-align:middle" align="center">External antenna power<br>Cut the <b>ANT_VCC<b> trace and install L1 to enable</td>
     </tr>
     <tr>
-        <td style="vertical-align:middle" align="center"><b>EXT INT NEO</b></td>
-        <td style="vertical-align:middle" align="center">Connected to the<br>NEO-D9S EXT_INT pin</td>
+        <td style="vertical-align:middle" align="center"><b>EXT_INT_NEO</b></td>
+        <td style="vertical-align:middle" align="center">Connected to the NEO-D9S EXT_INT pin</td>
     </tr>
     <tr>
         <td style="vertical-align:middle" align="center"><b>RX1</b></td>
@@ -75,11 +134,11 @@ With the SMA connector oriented to the 'top', the breakout pads down the left si
     </tr>
     <tr>
         <td style="vertical-align:middle" align="center"><b>RX2</b></td>
-        <td style="vertical-align:middle" align="center">NEO-D9S UART2 RX Pin<br>Connected to ZED-F9P TX2<br>(Open the **TX2** jumper to isolate)</td>
+        <td style="vertical-align:middle" align="center">NEO-D9S UART2 RX Pin<br>Connected to ZED-F9P TX2 (Open the <b>TX2</b> jumper to isolate)</td>
     </tr>
     <tr>
         <td style="vertical-align:middle" align="center"><b>TX2</b></td>
-        <td style="vertical-align:middle" align="center">NEO-D9S UART2 TX Pin<br>Connected to ZED-F9P RX2<br>(Open the **RX2** jumper to isolate)</td>
+        <td style="vertical-align:middle" align="center">NEO-D9S UART2 TX Pin<br>Connected to ZED-F9P RX2 (Open the <b>RX2</b> jumper to isolate)</td>
     </tr>
     <tr>
         <td style="vertical-align:middle" align="center"><b>GND</b></td>
@@ -87,7 +146,7 @@ With the SMA connector oriented to the 'top', the breakout pads down the left si
     </tr>
     <tr>
         <td style="vertical-align:middle" align="center"><b>3V3</b></td>
-        <td style="vertical-align:middle" align="center">3.3V Supply rail<br>Output of regulator U2<br>(Can be used as a power input)</td>
+        <td style="vertical-align:middle" align="center">3.3V Supply rail<br>Output of regulator U2 (Can also be used as a power input)</td>
     </tr>
     <tr>
         <td style="vertical-align:middle" align="center"><b>SDA</b></td>
@@ -116,11 +175,11 @@ With the SMA connector oriented to the 'top', the breakout pads down the right s
     </tr>
     <tr>
         <td style="vertical-align:middle" align="center"><b>RESET</b></td>
-        <td style="vertical-align:middle" align="center">Reset<br>Active low<br>Common to both ZED and NEO</td>
+        <td style="vertical-align:middle" align="center">Reset<br>Active low. Common to both ZED and NEO</td>
     </tr>
     <tr>
-        <td style="vertical-align:middle" align="center"><b>EXT INT</b></td>
-        <td style="vertical-align:middle" align="center">Connected to the<br>ZED-F9P EXT_INT pin</td>
+        <td style="vertical-align:middle" align="center"><b>EXT_INT</b></td>
+        <td style="vertical-align:middle" align="center">Connected to the ZED-F9P EXT_INT pin</td>
     </tr>
     <tr>
         <td style="vertical-align:middle" align="center"><b>TX1</b></td>
@@ -132,11 +191,11 @@ With the SMA connector oriented to the 'top', the breakout pads down the right s
     </tr>
     <tr>
         <td style="vertical-align:middle" align="center"><b>TX2</b></td>
-        <td style="vertical-align:middle" align="center">ZED-F9P UART2 TX Pin<br>Connected to NEO-D9S RX2<br>(Open the **TX2** jumper to isolate)</td>
+        <td style="vertical-align:middle" align="center">ZED-F9P UART2 TX Pin<br>Connected to NEO-D9S RX2 (Open the <b>TX2</b> jumper to isolate)</td>
     </tr>
     <tr>
         <td style="vertical-align:middle" align="center"><b>RX2</b></td>
-        <td style="vertical-align:middle" align="center">ZED-F9P UART2 RX Pin<br>Connected to NEO-D9S TX2<br>(Open the **RX2** jumper to isolate)</td>
+        <td style="vertical-align:middle" align="center">ZED-F9P UART2 RX Pin<br>Connected to NEO-D9S TX2 (Open the <b>RX2</b> jumper to isolate)</td>
     </tr>
     <tr>
         <td style="vertical-align:middle" align="center"><b>SCL</b></td>
@@ -148,7 +207,7 @@ With the SMA connector oriented to the 'top', the breakout pads down the right s
     </tr>
     <tr>
         <td style="vertical-align:middle" align="center"><b>3V3</b></td>
-        <td style="vertical-align:middle" align="center">3.3V Supply rail<br>Output of regulator U2<br>(Can be used as a power input)</td>
+        <td style="vertical-align:middle" align="center">3.3V Supply rail<br>Output of regulator U2 (Can be used as a power input)</td>
     </tr>
     <tr>
         <td style="vertical-align:middle" align="center"><b>GND</b></td>
@@ -172,12 +231,12 @@ With the SMA connector oriented to the 'top', the breakout pads along the bottom
         </th>
     </tr>
     <tr>
-        <td style="vertical-align:middle" align="center"><b>TX RDY</b></td>
-        <td style="vertical-align:middle" align="center">Indicates the ZED-F9P has data<br>waiting in its I<sup>2</sup>C TX buffer</td>
+        <td style="vertical-align:middle" align="center"><b>TX_RDY</b></td>
+        <td style="vertical-align:middle" align="center">Indicates the ZED-F9P has data waiting in its I<sup>2</sup>C TX buffer</td>
     </tr>
     <tr>
         <td style="vertical-align:middle" align="center"><b>TP</b></td>
-        <td style="vertical-align:middle" align="center">ZED-F9P Timing Pulse<br>(Pulse Per Second)</td>
+        <td style="vertical-align:middle" align="center">ZED-F9P Timing Pulse (Pulse Per Second)</td>
     </tr>
     <tr>
         <td style="vertical-align:middle" align="center"><b>GEO</b></td>
@@ -185,15 +244,15 @@ With the SMA connector oriented to the 'top', the breakout pads along the bottom
     </tr>
     <tr>
         <td style="vertical-align:middle" align="center"><b>RTK</b></td>
-        <td style="vertical-align:middle" align="center">ZED-F9P RTK indication<br>High = No Carrier Solution<br>Square Wave = Floating Solution<br>Low = Fixed Solution</td>
+        <td style="vertical-align:middle" align="center">ZED-F9P RTK indication<br>High = No Carrier Solution. Square Wave = Floating Solution. Low = Fixed Solution</td>
     </tr>
     <tr>
         <td style="vertical-align:middle" align="center"><b>5V</b></td>
-        <td style="vertical-align:middle" align="center">5V Power Rail<br>Can be used as a power input<br>or output (from USB)<br>(Diode protected)</td>
+        <td style="vertical-align:middle" align="center">5V Power Rail<br>Can be used as a power input or output (from USB) (Diode protected)</td>
     </tr>
     <tr>
         <td style="vertical-align:middle" align="center"><b>3V3</b></td>
-        <td style="vertical-align:middle" align="center">3.3V Supply rail<br>Output of regulator U2<br>(Can be used as a power input)</td>
+        <td style="vertical-align:middle" align="center">3.3V Supply rail<br>Output of regulator U2 (Can be used as a power input)</td>
     </tr>
     <tr>
         <td style="vertical-align:middle" align="center"><b>GND</b></td>
@@ -219,17 +278,17 @@ There are multiple jumpers on the back of the board that can be used to modify h
 *The jumpers on the back of the function board. (Click to enlarge)*
 </center>
 
-* **TX2** - Open this jumper to isolate NEO-D9S RX2 from ZED-F9P TX2
-* **RX2** - Open this jumper to isolate NEO-D9S TX2 from ZED-F9P RX2
+* **TX2** - open this jumper to isolate NEO-D9S RX2 from ZED-F9P TX2
+* **RX2** - open this jumper to isolate NEO-D9S TX2 from ZED-F9P RX2
     * By default, the NEO-D9S PMP (SPARTN) correction data stream is output directly from NEO-D9S TX2 to the ZED-F9P RX2
     * Opening this jumper will break that connection
-    * Correction data can be read from the NEO-D9S and pushed to the ZED-F9P via I<sup>2</sup>C instead - if desired
-* **I<sup>2</sup>C** - Close this double jumper to connect additional pull-up resistors to I<sup>2</sup>C **SCL** and **SDA**. Not recommended
-* **SHLD** - The two **SHLD** jumpers can be opened to isolate the USB-C connector shields from **GND**. Not recommended, but may help prevent EMI
-* **PWR** - Open this jumper to disable the Power LED
-* **RTK** - Open this jumper to disable the RTK LED
-* **GEO** - Open this jumper to disable the GEO LED
-* **TP** - Open this jumper to disable the TP (PPS) LED
+    * Correction data can be read from the NEO-D9S and pushed to the ZED-F9P via I<sup>2</sup>C instead
+* **I<sup>2</sup>C** - close this double jumper to connect additional pull-up resistors to I<sup>2</sup>C **SCL** and **SDA**. Not recommended
+* **SHLD** - the two **SHLD** jumpers can be opened to isolate the USB-C connector shields from **GND**. Not recommended, but may help prevent EMI
+* **PWR** - open this jumper to disable the Power LED
+* **RTK** - open this jumper to disable the RTK LED
+* **GEO** - open this jumper to disable the GEO LED
+* **TP** - open this jumper to disable the TP (PPS) LED
 
 ## ANT PWR
 
@@ -277,10 +336,10 @@ Repeat for the NEO-D9S using the **SAFEBOOT NEO** test point.
 
 The breakout has four LED indicators:
 
-* Power
-* RTK: Off = No Carrier Solution; Flashing = Floating Solution; On = Fixed Solution
-* GEO: Geofence indication
-* TP: Timing Pulse (Pulse Per Second)
+* **3V3** Power
+* **RTK**: Off = No Carrier Solution; Flashing = Floating Solution; On = Fixed Solution
+* **GEO**: Geofence indication
+* **TP**: Timing Pulse (Pulse Per Second)
 
 Each LED can be disabled by opening the corresponding split pad jumper on the bottom of the breakout
 
@@ -290,14 +349,14 @@ A small rechargeable coin cell maintains the ZED-F9P battery-backed RAM while th
 
 The battery is recharged slowly whenever 3.3V power is present.
 
-If the battery becomes discharged, connect 3.3V power for 48 hours to completely recharge the battery.
+If the battery becomes discharged, connect 3.3V power for at least 48 hours to recharge the battery.
 
 ## Power Supply and I/O voltage
 
 Both the ZED-F9P and NEO-D9S are 3.3V devices. They operate from 3.3V and all of their I/O pins are 3.3V.
 
 !!! attention
-    Do not drive any of the ZED-F9P or NEO-D9S I/O pins using 5V signals. You may damage either or both modules if you do. Use a suitable level-shifter if you want to interface to a 5V developemnt board.
+    Do not drive any of the ZED-F9P or NEO-D9S I/O pins using 5V signals. You may damage either or both modules if you do. Use a suitable level-shifter if you want to interface to a 5V development board.
 
 The board has a 3.3V regulator on-board to regulate 5V USB-C power (if present) down to 3.3V.
 

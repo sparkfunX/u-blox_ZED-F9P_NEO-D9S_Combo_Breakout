@@ -28,7 +28,7 @@ The u-blox ZED-F9P NEO-D9S Combo Breakout is a sophisticated yet compact GNSS bo
 
 * **`UART2 TX and RX`** - the ZED-F9P and NEO-D9S UART2 TX and RX are interconnected (crossed-over) to allow the NEO to feed corrections directly to the ZED
     * The UART2 pins can be isolated if required by opening the **TX2** and **RX2** jumpers
-    * Using UART2 to pass the correction data is recommended, but is optional. You can, if desired, use UART1 or I<sup>2</sup>C instead. Our u-blox Arduino Library has an example which shows how to read the correction data from the NEO-D9S and push it to the ZED-F9P using I<sup>2</sup>C.
+    * Using UART2 to pass the correction data is recommended, but is optional. You can use UART1 or I<sup>2</sup>C instead if you want to. Our u-blox Arduino Library has an [example](https://github.com/sparkfun/SparkFun_u-blox_GNSS_Arduino_Library/tree/main/examples/ZED-F9P/Example19_LBand_Corrections_with_NEO-D9S) which shows how to read the correction data from the NEO-D9S and push it to the ZED-F9P using I<sup>2</sup>C.
 
 <center>
 [![UART2](./img/hookup_guide/UART2.jpg){ width="200" }](./img/hookup_guide/UART2.jpg)<br>
@@ -99,7 +99,7 @@ The u-blox ZED-F9P NEO-D9S Combo Breakout is a sophisticated yet compact GNSS bo
 The board dimensions are illustrated in the drawing below. The listed measurements are in inches. The four mounting holes are compatible with 4-40 UNC or M3.0 screws.
 
 <center>
-[![Board Dimensions](./board_files/Dimensions.jpg){ width="200" }](./board_files/Dimensions.jpg)<br>
+[![Board Dimensions](./board_files/Dimensions.png){ width="200" }](./board_files/Dimensions.png)<br>
 *Board dimensions. (Click to enlarge)*
 </center>
 

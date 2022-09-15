@@ -10,7 +10,8 @@ The Combo Breakout is a very versatile board, combining the u-blox ZED-F9P multi
 </center>
 
 If you intend to use [u-blox's u-center (GNSS evaluation software for Windows)](https://www.u-blox.com/en/product/u-center) to configure both the ZED-F9P and the NEO-D9S
-and log data from the ZED-F9P, all you need to get started is a pair of USB cables and a suitable antenna:
+and log data from the ZED-F9P, all you need to get started is a pair of USB cables and a suitable antenna. u-blox have written an
+[excellent application note](https://www.u-blox.com/sites/default/files/documents/NEO-D9S_ZED-F9_Config_SPARTN_AppNote_UBX-22008160.pdf) which shows how to configure both modules using u-center.
 
 <table style="border-style:none">
     <tr>

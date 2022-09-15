@@ -15,15 +15,14 @@ The [SparkX u-blox ZED-F9P NEO-D9S Combo Breakout (SPX-20167)](https://www.spark
 with the NEO-D9S L-band GNSS correction data receiver. With a clear view of the sky, especially a clear view to the South, this combo breakout will deliver centimeter-level
 accuracy positioning without needing separate RTK or NTRIP corrections. An on-board splitter (power divider) allows you to connect both modules to a single L1/L2/L-Band antenna.
 
-The Combo Breakout is designed to work with u-blox's PointPerfect L-band satellite GNSS augmentation service, which provides homogeneous coverage in contiguous USA and Europe.
-
-!!! attention
-    u-blox provides products and services to "B2B Customers". Only business customers are eligible to register for a Thingstream (PointPerfect) account. You may be required to demonstrate that the use of the combo breakout is in relation to your trade, business, craft or profession. u-blox products and services are not intended for individual consumer use.
-
 <center>
 [![SparkX u-blox ZED-F9P NEO-D9S Combo Breakout](./img/hookup_guide/Perspective.jpg)](https://www.sparkfun.com/products/20167)
 <br>
 ### [SparkX u-blox ZED-F9P NEO-D9S Combo Breakout (SPX-20167)](https://www.sparkfun.com/products/20167)
 </center>
 
+The Combo Breakout is designed to work with u-blox's PointPerfect L-band satellite GNSS augmentation service, which provides homogeneous coverage in contiguous USA and Europe.
+
+!!! attention
+    u-blox provides products and services to "B2B Customers". Only business customers are eligible to register for a Thingstream (PointPerfect) account. You may be required to demonstrate that the use of the combo breakout is in relation to your trade, business, craft or profession. u-blox products and services are not intended for individual consumer use.
 

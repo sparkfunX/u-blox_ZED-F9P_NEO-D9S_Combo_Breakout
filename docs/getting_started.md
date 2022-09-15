@@ -4,6 +4,11 @@ Before you begin, you need to think about how you will use the SparkX u-blox ZED
 
 The Combo Breakout is a very versatile board, combining the u-blox ZED-F9P multi-band high precision GNSS module with the NEO-D9S L-band GNSS correction data receiver.
 
+<center>
+[![Hookup for u-center with two USB cables](./img/hookup_guide/USB_Hookup.jpg){ width="200" }](./img/hookup_guide/USB_Hookup.jpg)<br>
+*Hookup for u-center with two USB cables. (Click to enlarge)*
+</center>
+
 If you intend to use [u-blox's u-center (GNSS evaluation software for Windows)](https://www.u-blox.com/en/product/u-center) to configure both the ZED-F9P and the NEO-D9S
 and log data from the ZED-F9P, all you need to get started is a pair of USB cables and a suitable antenna:
 
@@ -51,6 +56,11 @@ so you may also want to purchase a SMA to TNC interface cable and/or a SMA femal
 </table>
 
 ## Getting Started with Arduino
+
+<center>
+[![Hookup for Arduino using Qwiic](./img/hookup_guide/Arduino_Hookup.jpg){ width="200" }](./img/hookup_guide/Arduino_Hookup.jpg)<br>
+*Hookup for Arduino using Qwiic. (Click to enlarge)*
+</center>
 
 It is also possible to power the board and communicate with it using I<sup>2</sup>C by connecting to either of the board's **Qwiic** connectors.
 SparkFun's [Qwiic Connect System](https://www.sparkfun.com/qwiic) uses 4-pin JST connectors, allowing you to quickly interface your development board to the Combo Board.

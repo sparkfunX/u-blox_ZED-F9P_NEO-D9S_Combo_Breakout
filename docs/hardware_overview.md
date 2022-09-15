@@ -1,7 +1,7 @@
 ## Hardware Overview
 
 <center>
-[![Combo Breakout PCB](./img/hookup_guide/Top.png){ width="200" }](./img/hookup_guide/Top.png)<br>
+[![Combo Breakout PCB](./img/hookup_guide/Perspective.jpg){ width="200" }](./img/hookup_guide/Perspective.jpg)<br>
 *The Combo Breakout PCB. (Click to enlarge)*
 </center>
 
@@ -13,7 +13,7 @@ The u-blox ZED-F9P NEO-D9S Combo Breakout is a sophisticated yet compact GNSS bo
     * Centimeter-level accuracy in a small and energy-efficient module
 
 <center>
-[![ZED-F9P](./img/hookup_guide/ZED-F9P.png){ width="200" }](./img/hookup_guide/ZED-F9P.png)<br>
+[![ZED-F9P](./img/hookup_guide/ZED-F9P.jpg){ width="200" }](./img/hookup_guide/ZED-F9P.jpg)<br>
 *The ZED-F9P GNSS module. (Click to enlarge)*
 </center>
 
@@ -22,7 +22,7 @@ The u-blox ZED-F9P NEO-D9S Combo Breakout is a sophisticated yet compact GNSS bo
     * It decodes the satellite transmission and outputs a correction stream directly to the ZED-F9P via UART2
 
 <center>
-[![NEO-D9S](./img/hookup_guide/NEO-D9S.png){ width="200" }](./img/hookup_guide/NEO-D9S.png)<br>
+[![NEO-D9S](./img/hookup_guide/NEO-D9S.jpg){ width="200" }](./img/hookup_guide/NEO-D9S.jpg)<br>
 *The NEO-D9S correction data receiver. (Click to enlarge)*
 </center>
 
@@ -31,7 +31,7 @@ The u-blox ZED-F9P NEO-D9S Combo Breakout is a sophisticated yet compact GNSS bo
     * Using UART2 to pass the correction data is recommended, but is optional. You can, if desired, use UART1 or I<sup>2</sup>C instead. Our u-blox Arduino Library has an example which shows how to read the correction data from the NEO-D9S and push it to the ZED-F9P using I<sup>2</sup>C.
 
 <center>
-[![UART2](./img/hookup_guide/UART2.png){ width="200" }](./img/hookup_guide/UART2.png)<br>
+[![UART2](./img/hookup_guide/UART2.jpg){ width="200" }](./img/hookup_guide/UART2.jpg)<br>
 *The UART2 connections. (Click to enlarge)*
 </center>
 
@@ -40,7 +40,7 @@ The u-blox ZED-F9P NEO-D9S Combo Breakout is a sophisticated yet compact GNSS bo
     * 3.3V power is provided for an active antenna
 
 <center>
-[![Splitter](./img/hookup_guide/Splitter.png){ width="200" }](./img/hookup_guide/Splitter.png)<br>
+[![Splitter](./img/hookup_guide/Splitter.jpg){ width="200" }](./img/hookup_guide/Splitter.jpg)<br>
 *The antenna splitter (power divider). (Click to enlarge)*
 </center>
 
@@ -49,7 +49,7 @@ The u-blox ZED-F9P NEO-D9S Combo Breakout is a sophisticated yet compact GNSS bo
     * There is no on-board USB hub. Both ports can be connected simultaneously to the same computer, or different computers if desired
 
 <center>
-[![USB Connectors](./img/hookup_guide/USB-C.png){ width="200" }](./img/hookup_guide/USB-C.png)<br>
+[![USB Connectors](./img/hookup_guide/USB-C.jpg){ width="200" }](./img/hookup_guide/USB-C.jpg)<br>
 *The two USB-C connectors. (Click to enlarge)*
 </center>
 
@@ -61,21 +61,21 @@ The u-blox ZED-F9P NEO-D9S Combo Breakout is a sophisticated yet compact GNSS bo
     * Each LED can be disabled by opening the corresponding split pad jumper on the bottom of the breakout
 
 <center>
-[![LEDs](./img/hookup_guide/LEDs.png){ width="200" }](./img/hookup_guide/LEDs.png)<br>
+[![LEDs](./img/hookup_guide/LEDs.jpg){ width="200" }](./img/hookup_guide/LEDs.jpg)<br>
 *The LEDs. (Click to enlarge)*
 </center>
 
 * **`Dual Qwiic Connectors`** - the breakout has two Qwiic (I<sup>2</sup>C) connectors allowing the breakout to be daisy-chained into your Qwiic project
 
 <center>
-[![Qwiic Connectors](./img/hookup_guide/Qwiic.png){ width="200" }](./img/hookup_guide/Qwiic.png)<br>
+[![Qwiic Connectors](./img/hookup_guide/Qwiic.jpg){ width="200" }](./img/hookup_guide/Qwiic.jpg)<br>
 *The two Qwiic connectors. (Click to enlarge)*
 </center>
 
 * **`Back-up Battery`** - a small rechargeable coin cell maintains the ZED-F9P battery-backed RAM while the power is disconnected
 
 <center>
-[![Back-up Battery](./img/hookup_guide/Battery.png){ width="200" }](./img/hookup_guide/Battery.png)<br>
+[![Back-up Battery](./img/hookup_guide/Battery.jpg){ width="200" }](./img/hookup_guide/Battery.jpg)<br>
 *The rechargeable back-up battery. (Click to enlarge)*
 </center>
 
@@ -90,7 +90,7 @@ The u-blox ZED-F9P NEO-D9S Combo Breakout is a sophisticated yet compact GNSS bo
     * Power: 5V and 3.3V
 
 <center>
-[![Breakout Pads](./img/hookup_guide/Pads.png){ width="200" }](./img/hookup_guide/Pads.png)<br>
+[![Breakout Pads](./img/hookup_guide/Pads.jpg){ width="200" }](./img/hookup_guide/Pads.jpg)<br>
 *The breakout pads. (Click to enlarge)*
 </center>
 
@@ -99,7 +99,7 @@ The u-blox ZED-F9P NEO-D9S Combo Breakout is a sophisticated yet compact GNSS bo
 The board dimensions are illustrated in the drawing below. The listed measurements are in inches. The four mounting holes are compatible with 4-40 UNC or M3.0 screws.
 
 <center>
-[![Board Dimensions](./board_files/Dimensions.png){ width="200" }](./board_files/Dimensions.png)<br>
+[![Board Dimensions](./board_files/Dimensions.jpg){ width="200" }](./board_files/Dimensions.jpg)<br>
 *Board dimensions. (Click to enlarge)*
 </center>
 
@@ -274,7 +274,7 @@ With the SMA connector oriented to the 'top', the breakout pads along the bottom
 There are multiple jumpers on the back of the board that can be used to modify how the board functions.
 
 <center>
-[![Jumpers](./img/hookup_guide/jumpers.png){ width="200" }](./img/hookup_guide/jumpers.png)<br>
+[![Jumpers](./img/hookup_guide/jumpers.jpg){ width="200" }](./img/hookup_guide/jumpers.jpg)<br>
 *The jumpers on the back of the function board. (Click to enlarge)*
 </center>
 
@@ -300,14 +300,14 @@ If your antenna requires a higher voltage (or current):
 * Isolate **VCC_RF** by cutting the trace marked by the arrow symbols on the top of the PCB
 
 <center>
-[![VCC_RF](./img/hookup_guide/VCC_RF.png){ width="200" }](./img/hookup_guide/VCC_RF.png)<br>
+[![VCC_RF](./img/hookup_guide/VCC_RF.jpg){ width="200" }](./img/hookup_guide/VCC_RF.jpg)<br>
 *The VCC_RF trace. (Click to enlarge)*
 </center>
 
 * Install inductor L1 - using a 0603 inductor with impedance >500 Ohms at 1.5 GHz
 
 <center>
-[![L1](./img/hookup_guide/L1.png){ width="200" }](./img/hookup_guide/L1.png)<br>
+[![L1](./img/hookup_guide/L1.jpg){ width="200" }](./img/hookup_guide/L1.jpg)<br>
 *The position of L1. (Click to enlarge)*
 </center>
 
@@ -328,7 +328,7 @@ If this becomes necessary:
 Repeat for the NEO-D9S using the **SAFEBOOT NEO** test point.
 
 <center>
-[![Jumpers](./img/hookup_guide/safeboot.png){ width="200" }](./img/hookup_guide/safeboot.png)<br>
+[![Jumpers](./img/hookup_guide/safeboot.jpg){ width="200" }](./img/hookup_guide/safeboot.jpg)<br>
 *The two SAFEBOOT test points. (Click to enlarge)*
 </center>
 

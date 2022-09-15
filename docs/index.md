@@ -21,7 +21,7 @@ The Combo Breakout is designed to work with u-blox's PointPerfect L-band satelli
     u-blox provides products and services to "B2B Customers". Only business customers are eligible to register for a Thingstream (PointPerfect) account. You may be required to demonstrate that the use of the combo breakout is in relation to your trade, business, craft or profession. u-blox products and services are not intended for individual consumer use.
 
 <center>
-[![SparkX u-blox ZED-F9P NEO-D9S Combo Breakout]()](https://www.sparkfun.com/products/20167)
+[![SparkX u-blox ZED-F9P NEO-D9S Combo Breakout](./img/hookup_guide/Perspective.jpg)](https://www.sparkfun.com/products/20167)
 <br>
 ### [SparkX u-blox ZED-F9P NEO-D9S Combo Breakout (SPX-20167)](https://www.sparkfun.com/products/20167)
 </center>

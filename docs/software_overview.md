@@ -183,19 +183,19 @@ The final piece of the puzzle is to provide the ZED-F9P with the keys it needs t
 
 The ZED-F9P can hold two dynamic keys: the current key; and the next key. We also need to tell it when each key is valid from, so it knows when to switch to the next key.
 
-You can find the current and next keys in the **Location Services** \ **Location Things** \ **Thing Details** \ **Credentials** tab in Thingstream:
+You can find the current and next keys in the **`Location Services \ Location Things \ Thing Details \ Credentials`** tab in Thingstream:
 
 <center>
 [![L-band Dynamic Keys](./img/hookup_guide/Dynamic_Keys.png){ width="400" }](./img/hookup_guide/Dynamic_Keys.png)<br>
 *PointPerfect L-band dynamic keys. (Click to enlarge)*
 </center>
 
-The ZED-F9P actually needs to know when the keys are valid **from**, rather than when they expire. We need to work backwards 4 weeks from the expiry date.
+The ZED-F9P actually needs to know when the keys are valid **from**, rather than when they expire. Each key is walid for four weeks, so we need to work backwards 4 weeks from the expiry date.
 
 The current key expires at midnight (UTC) at the end of Friday September 23rd. This means it became valid 4 weeks earlier at midnight (UTC) on August 27th:
 
 <center>
-[![Dynamic Key expiry](./img/hookup_guide/Key_Expiry.png){ width="400" }](./img/hookup_guide/Key_Expiry.png)  [![Dynamic Key valid from](./img/hookup_guide/Key_Valid_From.png){ width="400" }](./img/hookup_guide/Key_Valid_From.png)<br>
+[![Dynamic Key expiry](./img/hookup_guide/Key_Expiry.png){ width="200" }](./img/hookup_guide/Key_Expiry.png)  [![Dynamic Key valid from](./img/hookup_guide/Key_Valid_From.png){ width="200" }](./img/hookup_guide/Key_Valid_From.png)<br>
 *Dynamic Key: Expiry and Valid From dates. (Click to enlarge)*
 </center>
 

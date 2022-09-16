@@ -44,7 +44,7 @@ to configure the NEO and ZED using our [u-blox GNSS Arduino Library](https://git
 
 ## NEO-D9S Configuration
 
-The first step is to declare the SFE_UBLOX_GNSS object. Like most Arduino sketches, this is done at a global scope (after the include file declaration), not within the ```setup()``` or ```loop()``` functions. 
+The first step is to declare the **`SFE_UBLOX_GNSS`** object. Like most Arduino sketches, this is done at a global scope (after the include file declaration), not within the ```setup()``` or ```loop()``` functions. 
 
 ```C++
 #include <SparkFun_u-blox_GNSS_Arduino_Library.h> //http://librarymanager/All#SparkFun_u-blox_GNSS
@@ -52,15 +52,10 @@ SFE_UBLOX_GNSS myLBand; // NEO-D9S
 ```
 
 Within ```setup()``` we then need to start (initialize) communiation with the NEO-D9S.
-The NEO-D9S has a default I<sup>2</sup>C address of 0x43 and so we need to pass that when calling the ```begin``` method:
+The NEO-D9S has a default I<sup>2</sup>C address of 0x43 and so we need to provide that when calling the ```begin``` method:
 
 ```C++
   Wire.begin(); //Start I2C
-
-  //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-  // Begin and configure the NEO-D9S L-Band receiver
-
-  //myLBand.enableDebugging(); // Uncomment this line to enable helpful debug messages on Serial
 
   while (myLBand.begin(Wire, 0x43) == false) //Connect to the u-blox NEO-D9S using Wire port. The D9S default I2C address is 0x43 (not 0x42)
   {
@@ -88,7 +83,7 @@ The NEO-D9S needs to be configured so it can receive the PointPerfect correction
 The centre frequency varies depending on which satellite is broadcasting corrections for your geographical area.
 The frequency for the USA is different to that for Europe:
 
-The up-to-date frequencies are distributed via the MQTT **/pp/frequencies/Lb** topic. At the time of writing, they are:
+The up-to-date frequencies are distributed via the MQTT **/pp/frequencies/Lb** topic. At the time of writing, they are (in MHz):
 
 ```C++
 {
@@ -135,7 +130,7 @@ Finally, we need to ensure that the UART2 port is set correctly. We need to:
 * Ensure that the **UBX** protocol is enabled for output on UART2
 * Enable the **RXM PMP** message on UART2
     * The **RXM PMP** message contains the **SPARTN** correction data in **UBX** format
-* Perform a restart (software reset) so that the NEO-D9S uses the new configuration items
+* Perform a restart (software reset) so that the NEO-D9S starts using the new configuration items
 
 ```C++
   if (ok) ok = myLBand.setVal32(UBLOX_CFG_UART2_BAUDRATE,         38400); // match baudrate with ZED default
@@ -155,20 +150,15 @@ Once the NEO-D9S has aquired the signal from the satellite, it will start output
 
 ## ZED-F9P Configuration
 
-We need to declare a second SFE_UBLOX_GNSS object for the ZED-F9P. Again, this is done at a global scope (after the include file declaration), not within the ```setup()``` or ```loop()``` functions. 
+We need to declare a second **`SFE_UBLOX_GNSS`** object for the ZED-F9P. Again, this is done at a global scope (after the include file declaration), not within the ```setup()``` or ```loop()``` functions. 
 
 ```C++
 SFE_UBLOX_GNSS myGNSS; // ZED-F9P
 ```
 
-Within ```setup()``` we then need to start (initialize) communiation with the ZED-F9P:
+Within ```setup()``` we need to start (initialize) communiation with the ZED-F9P:
 
 ```C++
-  //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-  // Begin and configure the ZED-F9x
-
-  //myGNSS.enableDebugging(); // Uncomment this line to enable helpful debug messages on Serial
-
   while (myGNSS.begin() == false) //Connect to the u-blox module using Wire port and the default I2C address (0x42)
   {
     Serial.println(F("u-blox GNSS module not detected at default I2C address. Please check wiring."));
@@ -185,9 +175,7 @@ We then need to:
 
 ```C++
           ok = myGNSS.setPortInput(COM_PORT_UART2, COM_TYPE_UBX | COM_TYPE_NMEA | COM_TYPE_SPARTN); //Be sure SPARTN input is enabled
-
   if (ok) ok = myGNSS.setDGNSSConfiguration(SFE_UBLOX_DGNSS_MODE_FIXED); // Set the differential mode - ambiguities are fixed whenever possible
-
   if (ok) ok = myGNSS.setVal8(UBLOX_CFG_SPARTN_USE_SOURCE, 1); // use LBAND PMP message
 ```
 

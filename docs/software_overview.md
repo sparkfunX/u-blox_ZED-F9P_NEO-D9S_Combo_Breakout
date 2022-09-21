@@ -224,7 +224,9 @@ Alternately, we can set both the current key and the next key together using **`
 ```
 
 The keys can also be retrieved using MQTT. We have an [Arduino Library example](https://github.com/sparkfun/SparkFun_u-blox_GNSS_Arduino_Library/tree/main/examples/ZED-F9P/Example20_PMP_with_L-Band_Keys_via_MQTT)
-which shows how to retrieve the keys from the L-band + IP key distribution topic **/pp/ubx/0236/Lb**. But note that the MQTT topic provides the **valid from** in Unix epoch format,
+which shows how to retrieve the keys from the L-band + IP key distribution topic **/pp/ubx/0236/Lb** . That topic provides the keys in UBX (binary) format, ready to be pushed to the ZED.
+
+The keys are also available in human-readable JSON format from the MQTT topic **/pp/key/Lb** . But note that that topic provides the **valid from** in Unix epoch format,
 in milliseconds, excluding the 18 leap seconds since GPS time started!
 
 ```C++

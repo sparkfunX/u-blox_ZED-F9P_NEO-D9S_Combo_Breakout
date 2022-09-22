@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/twitter/follow/sparkfun.svg?style=social&logo=twitter" alt="follow on Twitter"></a>
 </p>
 
-[![SparkX u-blox ZED-F9P NEO-D9S Combo Breakout]()](https://www.sparkfun.com/products/20167)
+[![SparkX u-blox ZED-F9P NEO-D9S Combo Breakout](https://cdn.sparkfun.com//assets/parts/1/9/9/6/7/ZED-F9P_NEO-D9S_Combo_Board-_01.jpg)](https://www.sparkfun.com/products/20167)
 
 *[SparkX u-blox ZED-F9P NEO-D9S Combo Breakout (SPX-20167)](https://www.sparkfun.com/products/20167)*
 

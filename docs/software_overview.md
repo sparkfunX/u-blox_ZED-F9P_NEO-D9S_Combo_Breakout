@@ -47,7 +47,7 @@ to configure the NEO and ZED using our [u-blox GNSS Arduino Library](https://git
 The first step is to declare the **`SFE_UBLOX_GNSS`** object. Like most Arduino sketches, this is done at a global scope (after the include file declaration), not within the ```setup()``` or ```loop()``` functions. 
 
 ```C++
-#include <SparkFun_u-blox_GNSS_Arduino_Library.h> //http://librarymanager/All#SparkFun_u-blox_GNSS_v3
+#include <SparkFun_u-blox_GNSS_v3.h> //http://librarymanager/All#SparkFun_u-blox_GNSS_v3
 SFE_UBLOX_GNSS myLBand; // NEO-D9S
 ```
 

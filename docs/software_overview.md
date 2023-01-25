@@ -113,15 +113,15 @@ The code to configure the NEO-D9S is as follows. Note that the **`UBLOX_CFG_PMP_
 also need to be changed.
 
 ```C++
-  uint8_t ok = myLBand.setVal32(UBLOX_CFG_PMP_CENTER_FREQUENCY,   myLBandFreq); // Default 1539812500 Hz
-  if (ok) ok = myLBand.setVal16(UBLOX_CFG_PMP_SEARCH_WINDOW,      2200);        // Default 2200 Hz
-  if (ok) ok = myLBand.setVal8(UBLOX_CFG_PMP_USE_SERVICE_ID,      0);           // Default 1 
-  if (ok) ok = myLBand.setVal16(UBLOX_CFG_PMP_SERVICE_ID,         21845);       // Default 50821
-  if (ok) ok = myLBand.setVal16(UBLOX_CFG_PMP_DATA_RATE,          2400);        // Default 2400 bps
-  if (ok) ok = myLBand.setVal8(UBLOX_CFG_PMP_USE_DESCRAMBLER,     1);           // Default 1
-  if (ok) ok = myLBand.setVal16(UBLOX_CFG_PMP_DESCRAMBLER_INIT,   26969);       // Default 23560
-  if (ok) ok = myLBand.setVal8(UBLOX_CFG_PMP_USE_PRESCRAMBLING,   0);           // Default 0
-  if (ok) ok = myLBand.setVal64(UBLOX_CFG_PMP_UNIQUE_WORD,        16238547128276412563ull); // 0xE15AE893E15AE893
+  uint8_t ok = myLBand.setVal(UBLOX_CFG_PMP_CENTER_FREQUENCY,  myLBandFreq); // Default 1539812500 Hz
+  if (ok) ok = myLBand.setVal(UBLOX_CFG_PMP_SEARCH_WINDOW,     2200);        // Default 2200 Hz
+  if (ok) ok = myLBand.setVal(UBLOX_CFG_PMP_USE_SERVICE_ID,    0);           // Default 1 
+  if (ok) ok = myLBand.setVal(UBLOX_CFG_PMP_SERVICE_ID,        21845);       // Default 50821
+  if (ok) ok = myLBand.setVal(UBLOX_CFG_PMP_DATA_RATE,         2400);        // Default 2400 bps
+  if (ok) ok = myLBand.setVal(UBLOX_CFG_PMP_USE_DESCRAMBLER,   1);           // Default 1
+  if (ok) ok = myLBand.setVal(UBLOX_CFG_PMP_DESCRAMBLER_INIT,  26969);       // Default 23560
+  if (ok) ok = myLBand.setVal(UBLOX_CFG_PMP_USE_PRESCRAMBLING, 0);           // Default 0
+  if (ok) ok = myLBand.setVal(UBLOX_CFG_PMP_UNIQUE_WORD,       16238547128276412563ull); // 0xE15AE893E15AE893
 ```
 
 Finally, we need to ensure that the UART2 port is set correctly. We need to:
@@ -133,7 +133,7 @@ Finally, we need to ensure that the UART2 port is set correctly. We need to:
 * Perform a restart (software reset) so that the NEO-D9S starts using the new configuration items
 
 ```C++
-  if (ok) ok = myLBand.setVal32(UBLOX_CFG_UART2_BAUDRATE,         38400); // match baudrate with ZED default
+  if (ok) ok = myLBand.setVal(UBLOX_CFG_UART2_BAUDRATE,           38400); // match baudrate with ZED default
   if (ok) ok = myLBand.setVal(UBLOX_CFG_UART2OUTPROT_UBX,         1);     // Enable UBX output on UART2
   if (ok) ok = myLBand.setVal(UBLOX_CFG_MSGOUT_UBX_RXM_PMP_UART2, 1);     // Output UBX-RXM-PMP on UART2
   
@@ -174,7 +174,7 @@ We then need to:
 * Tell the ZED-F9P to accept L-band PMP as a correction source
 
 ```C++
-          ok = myGNSS.setPortInput(COM_PORT_UART2, COM_TYPE_UBX | COM_TYPE_NMEA | COM_TYPE_SPARTN); //Be sure SPARTN input is enabled
+          ok = myGNSS.setI2CInput(COM_TYPE_UBX | COM_TYPE_NMEA | COM_TYPE_SPARTN); //Be sure SPARTN input is enabled
   if (ok) ok = myGNSS.setDGNSSConfiguration(SFE_UBLOX_DGNSS_MODE_FIXED); // Set the differential mode - ambiguities are fixed whenever possible
   if (ok) ok = myGNSS.setVal8(UBLOX_CFG_SPARTN_USE_SOURCE, 1); // use LBAND PMP message
 ```

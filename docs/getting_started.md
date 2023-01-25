@@ -23,12 +23,12 @@ and log data from the ZED-F9P, all you need to get started is a pair of USB cabl
             GPS-17751
         </td>
         <td>
-            <a href="https://www.sparkfun.com/products/14743">
-                <center><img src="https://cdn.sparkfun.com//assets/parts/1/2/9/7/2/14743-USB_3.1_Cable_A_to_C_-_3_Foot-01.jpg" alt="USB 3.1 Cable A to C - 3 Foot" height="140">
+            <a href="https://www.sparkfun.com/products/21281">
+                <center><img src="https://cdn.sparkfun.com//assets/parts/2/1/0/6/5/21281-_CAB-_01.jpg" alt="Interface Cable - SMA Female to SMA Male (10m, RG58)" height="140">
                 </center>
-                <h3 class="title">USB 3.1 Cable A to C - 3 Foot</h3>
+                <h3 class="title">Interface Cable - SMA Female to SMA Male (10m, RG58)</h3>
             </a>
-            CAB-14743
+            CAB-21281
         </td>
     </tr>
 </table>

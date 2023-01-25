@@ -66,7 +66,7 @@ so you may also want to purchase a SMA to TNC interface cable and/or a SMA femal
 It is also possible to power the board and communicate with it using I<sup>2</sup>C by connecting to either of the board's **Qwiic** connectors.
 SparkFun's [Qwiic Connect System](https://www.sparkfun.com/qwiic) uses 4-pin JST connectors, allowing you to quickly interface your development board to the Combo Board.
 
-Our [u-blox GNSS Arduino Library](https://github.com/sparkfun/SparkFun_u-blox_GNSS_Arduino_Library) contains a comprehensive set of tried and tested examples that will work
+Our [u-blox GNSS Arduino Library - v3](https://github.com/sparkfun/SparkFun_u-blox_GNSS_v3) contains a comprehensive set of tried and tested examples that will work
 on any Qwiic-enabled development board. There are dedicated examples for the ZED-F9P and NEO-D9S.
 
 You can also use 3.3V Serial (UART) to communicate with both the ZED-F9P and NEO-D9S. Our Arduino Library supports both Serial and I<sup>2</sup>C. (It supports SPI too, but SPI

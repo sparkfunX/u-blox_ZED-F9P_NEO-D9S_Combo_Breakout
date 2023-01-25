@@ -40,14 +40,14 @@ Once L-band permissions are enabled on your Thingstream account, you will be abl
 
 u-blox have written a [comprehensive application note](https://www.u-blox.com/sites/default/files/documents/NEO-D9S_ZED-F9_Config_SPARTN_AppNote_UBX-22008160.pdf) which
 describes in detail: the configuration of both NEO and ZED; and how to interpret the expiry date for the L-band encryption keys. In the following sections, we describe how
-to configure the NEO and ZED using our [u-blox GNSS Arduino Library](https://github.com/sparkfun/SparkFun_u-blox_GNSS_Arduino_Library).
+to configure the NEO and ZED using our [u-blox GNSS Arduino Library](https://github.com/sparkfun/SparkFun_u-blox_GNSS_v3).
 
 ## NEO-D9S Configuration
 
 The first step is to declare the **`SFE_UBLOX_GNSS`** object. Like most Arduino sketches, this is done at a global scope (after the include file declaration), not within the ```setup()``` or ```loop()``` functions. 
 
 ```C++
-#include <SparkFun_u-blox_GNSS_Arduino_Library.h> //http://librarymanager/All#SparkFun_u-blox_GNSS
+#include <SparkFun_u-blox_GNSS_Arduino_Library.h> //http://librarymanager/All#SparkFun_u-blox_GNSS_v3
 SFE_UBLOX_GNSS myLBand; // NEO-D9S
 ```
 
@@ -223,7 +223,7 @@ Alternately, we can set both the current key and the next key together using **`
   if (ok) ok = myGNSS.setDynamicSPARTNKeys(16, 2224, 518400, "500--------------------------177", 16, 2228, 518400, "582--------------------------a7d");
 ```
 
-The keys can also be retrieved using MQTT. We have an [Arduino Library example](https://github.com/sparkfun/SparkFun_u-blox_GNSS_Arduino_Library/tree/main/examples/ZED-F9P/Example20_PMP_with_L-Band_Keys_via_MQTT)
+The keys can also be retrieved using MQTT. We have an [Arduino Library example](https://github.com/sparkfun/SparkFun_u-blox_GNSS_v3/tree/main/examples/NEO-D9S_and_NEO-D9C/Example6_PMP_with_L-Band_Keys_via_MQTT)
 which shows how to retrieve the keys from the L-band + IP key distribution topic **/pp/ubx/0236/Lb** . That topic provides the keys in UBX (binary) format, ready to be pushed to the ZED.
 
 The keys are also available in human-readable JSON format from the MQTT topic **/pp/key/Lb** . But note that that topic provides the **valid from** in Unix epoch format,
